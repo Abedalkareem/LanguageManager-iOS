@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Splash View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SplashViewController" customModule="LanguageManager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,117 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mP-ZJ-SKN">
+                                <rect key="frame" x="151.5" y="323" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4mP-ZJ-SKN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OXP-wQ-p3f"/>
+                            <constraint firstItem="4mP-ZJ-SKN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="po1-Ne-pg9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="2o1-Ly-YmI" kind="presentation" identifier="nextPage" id="CWo-vG-7bP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130" y="139"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="4kH-zi-eKe">
+            <objects>
+                <viewController id="2o1-Ly-YmI" customClass="MainViewController" customModule="LanguageManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="flF-KR-GMq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Suy-ih-Pda"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rDs-pK-caz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi all !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVJ-ZL-1cE">
+                                <rect key="frame" x="163.5" y="44" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yND-qw-RWw">
+                                <rect key="frame" x="127" y="629" width="120" height="30"/>
+                                <state key="normal" title="Change language"/>
+                                <connections>
+                                    <segue destination="lDM-g5-Oia" kind="presentation" id="PtE-86-Oxu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeJ-4c-02Y">
+                                <rect key="frame" x="166.5" y="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Suy-ih-Pda" firstAttribute="top" secondItem="yND-qw-RWw" secondAttribute="bottom" constant="8" id="4mm-a5-fkS"/>
+                            <constraint firstItem="yND-qw-RWw" firstAttribute="centerX" secondItem="rDs-pK-caz" secondAttribute="centerX" id="7hb-1e-CeZ"/>
+                            <constraint firstItem="gVJ-ZL-1cE" firstAttribute="top" secondItem="flF-KR-GMq" secondAttribute="bottom" constant="24" id="8e3-oE-JEq"/>
+                            <constraint firstItem="UeJ-4c-02Y" firstAttribute="centerX" secondItem="rDs-pK-caz" secondAttribute="centerX" id="Jzt-dK-S5h"/>
+                            <constraint firstItem="UeJ-4c-02Y" firstAttribute="centerY" secondItem="rDs-pK-caz" secondAttribute="centerY" id="KKr-PA-7Vz"/>
+                            <constraint firstItem="gVJ-ZL-1cE" firstAttribute="centerX" secondItem="rDs-pK-caz" secondAttribute="centerX" id="jiZ-TZ-3KH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblTest" destination="UeJ-4c-02Y" id="dC9-90-Axd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ulO-LK-njx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831" y="139"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="ghz-Gx-vSH">
+            <objects>
+                <viewController id="lDM-g5-Oia" customClass="SettingsViewController" customModule="LanguageManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gyq-S9-af6"/>
+                        <viewControllerLayoutGuide type="bottom" id="cy2-pX-kmC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g78-CJ-Aez">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEd-Qi-dKb">
+                                <rect key="frame" x="162" y="80" width="50" height="30"/>
+                                <state key="normal" title="English"/>
+                                <connections>
+                                    <action selector="changeLanguage:" destination="lDM-g5-Oia" eventType="touchUpInside" id="ROV-yj-4WV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vvo-mL-x9q">
+                                <rect key="frame" x="165.5" y="118" width="44" height="30"/>
+                                <state key="normal" title="Arabic"/>
+                                <connections>
+                                    <action selector="changeLanguage:" destination="lDM-g5-Oia" eventType="touchUpInside" id="Cc2-fg-Xdt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EEd-Qi-dKb" firstAttribute="top" secondItem="Gyq-S9-af6" secondAttribute="bottom" constant="60" id="Sqa-Oe-bly"/>
+                            <constraint firstItem="EEd-Qi-dKb" firstAttribute="centerX" secondItem="g78-CJ-Aez" secondAttribute="centerX" id="f6Q-3q-HZG"/>
+                            <constraint firstItem="Vvo-mL-x9q" firstAttribute="top" secondItem="EEd-Qi-dKb" secondAttribute="bottom" constant="8" id="nkE-sr-qCN"/>
+                            <constraint firstItem="Vvo-mL-x9q" firstAttribute="centerX" secondItem="g78-CJ-Aez" secondAttribute="centerX" id="uDn-z3-qzW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BUJ-tl-aBY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1517.5999999999999" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

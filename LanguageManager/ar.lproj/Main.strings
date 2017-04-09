@@ -1,15 +1,15 @@
 
 /* Class = "UILabel"; text = "Welcome"; ObjectID = "4mP-ZJ-SKN"; */
-"4mP-ZJ-SKN.text" = "Welcome";
+"4mP-ZJ-SKN.text" = "اهلا وسهلا";
 
 /* Class = "UIButton"; normalTitle = "English"; ObjectID = "EEd-Qi-dKb"; */
 "EEd-Qi-dKb.normalTitle" = "English";
 
 /* Class = "UIButton"; normalTitle = "Arabic"; ObjectID = "Vvo-mL-x9q"; */
-"Vvo-mL-x9q.normalTitle" = "Arabic";
+"Vvo-mL-x9q.normalTitle" = "عربي";
 
 /* Class = "UILabel"; text = "Hi all !"; ObjectID = "gVJ-ZL-1cE"; */
-"gVJ-ZL-1cE.text" = "Hi all !";
+"gVJ-ZL-1cE.text" = "هلا بالجميع !";
 
 /* Class = "UIButton"; normalTitle = "Change language"; ObjectID = "yND-qw-RWw"; */
-"yND-qw-RWw.normalTitle" = "Change language";
+"yND-qw-RWw.normalTitle" = "غير اللغة";
