@@ -1,0 +1,16 @@
+/*
+ Localizable.strings
+ LanguageManager
+ 
+ Created by abedalkareem omreyh on 4/9/17.
+ Copyright © 2017 abedalkareem. All rights reserved.
+ */
+
+"Test language" = "تجربة اللغة";
+"Hello !!" = "اهلا !!";
+"Hi all !" = "اهلا بالجميع !";
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam." = "كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف.";
+"Change language" = "غير اللغة";
+"Arabic" = "عربي";
+"Welcome" = "اهلا وسهلا";
+

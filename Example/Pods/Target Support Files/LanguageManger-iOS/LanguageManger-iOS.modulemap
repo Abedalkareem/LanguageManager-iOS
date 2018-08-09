@@ -1,0 +1,6 @@
+framework module LanguageManger_iOS {
+  umbrella header "LanguageManger-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

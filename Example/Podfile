@@ -3,9 +3,5 @@ use_frameworks!
 target 'LanguageManger-iOS_Example' do
   pod 'LanguageManger-iOS', :path => '../'
 
-  target 'LanguageManger-iOS_Tests' do
-    inherit! :search_paths
 
-    
-  end
 end
