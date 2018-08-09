@@ -55,8 +55,12 @@ Example:
 
 <b>Installation</b>
 
-Just add ```LanguageManger.swift``` in your project
+LanguageManger-iOS is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
 
+```ruby
+pod 'LanguageManger-iOS'
+```
 
 <b>Note</b>
 
