@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Iei-Ki-aVZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Iei-Ki-aVZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Splash View Controller-->
         <scene sceneID="Bhf-dB-jHp">
             <objects>
-                <viewController id="Iei-Ki-aVZ" customClass="SplashViewController" customModule="LanguageManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Iei-Ki-aVZ" customClass="SplashViewController" customModule="LanguageManger_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k6z-gy-709"/>
                         <viewControllerLayoutGuide type="bottom" id="LAB-qM-lX0"/>
@@ -22,23 +22,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0VR-kg-jtL">
-                                <rect key="frame" x="149.5" y="630" width="75.5" height="21"/>
+                                <rect key="frame" x="150" y="630" width="75.5" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.32549019610000002" green="0.33725490200000002" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="hAP-8s-pwW">
-                                <rect key="frame" x="127" y="273" width="120" height="120"/>
+                                <rect key="frame" x="127.5" y="273.5" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="HEM-2M-AQD"/>
                                     <constraint firstAttribute="width" constant="120" id="Uq8-mr-LrC"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Localize from storyboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpI-wp-dq2">
+                                <rect key="frame" x="85" y="593" width="205" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.33725490200000002" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="LAB-qM-lX0" firstAttribute="top" secondItem="0VR-kg-jtL" secondAttribute="bottom" constant="16" id="3Mo-ZH-iWu"/>
+                            <constraint firstItem="gpI-wp-dq2" firstAttribute="centerX" secondItem="HJV-aA-qXa" secondAttribute="centerX" id="7IP-pk-vWo"/>
                             <constraint firstItem="hAP-8s-pwW" firstAttribute="centerX" secondItem="HJV-aA-qXa" secondAttribute="centerX" id="IRE-pN-2zI"/>
+                            <constraint firstItem="0VR-kg-jtL" firstAttribute="top" secondItem="gpI-wp-dq2" secondAttribute="bottom" constant="16" id="XP3-eB-9Zm"/>
                             <constraint firstItem="0VR-kg-jtL" firstAttribute="centerX" secondItem="HJV-aA-qXa" secondAttribute="centerX" id="d2I-bv-pQl"/>
                             <constraint firstItem="hAP-8s-pwW" firstAttribute="centerY" secondItem="HJV-aA-qXa" secondAttribute="centerY" id="um8-qR-dNx"/>
                         </constraints>
@@ -54,7 +62,7 @@
         <!--Main View Controller-->
         <scene sceneID="GmF-e7-nmq">
             <objects>
-                <viewController id="hg9-fF-859" customClass="MainViewController" customModule="LanguageManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hg9-fF-859" customClass="MainViewController" customModule="LanguageManger_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9ji-Hp-LQU"/>
                         <viewControllerLayoutGuide type="bottom" id="rot-65-JtE"/>
@@ -64,7 +72,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi all !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsS-q6-3yA">
-                                <rect key="frame" x="162" y="24" width="50" height="21"/>
+                                <rect key="frame" x="162.5" y="24" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.32549019610000002" green="0.33725490200000002" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -77,11 +85,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJS-WG-QxU">
-                                <rect key="frame" x="87" y="555" width="200" height="40"/>
+                                <rect key="frame" x="87.5" y="555" width="200" height="40"/>
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.33725490200000002" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Hgq-lk-WQN"/>
-                                    <constraint firstAttribute="width" constant="200" id="RDz-UM-Uc6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="RDz-UM-Uc6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="Change language">
@@ -92,7 +100,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VX-W6-39l">
-                                <rect key="frame" x="314.5" y="151" width="44.5" height="21"/>
+                                <rect key="frame" x="16" y="151" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.32549019610000002" green="0.33725490200000002" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -101,6 +109,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zsS-q6-3yA" firstAttribute="top" secondItem="9ji-Hp-LQU" secondAttribute="bottom" constant="24" id="2A1-KD-wfr"/>
+                            <constraint firstItem="6VX-W6-39l" firstAttribute="leading" secondItem="ZUK-Sx-UUK" secondAttribute="leading" id="4PP-u3-z5I"/>
                             <constraint firstItem="ZUK-Sx-UUK" firstAttribute="top" secondItem="zsS-q6-3yA" secondAttribute="bottom" constant="8" id="52Z-ZR-iZT"/>
                             <constraint firstItem="6VX-W6-39l" firstAttribute="top" secondItem="ZUK-Sx-UUK" secondAttribute="bottom" constant="16.5" id="Jgl-X1-xoc"/>
                             <constraint firstItem="zsS-q6-3yA" firstAttribute="centerX" secondItem="4rI-Ki-wUe" secondAttribute="centerX" id="LXf-yA-sgo"/>
@@ -123,7 +132,7 @@
         <!--Settings View Controller-->
         <scene sceneID="4Hp-cP-K4y">
             <objects>
-                <viewController id="bV5-uF-RT9" customClass="SettingsViewController" customModule="LanguageManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bV5-uF-RT9" customClass="SettingsViewController" customModule="LanguageManger_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ikK-T4-mtV"/>
                         <viewControllerLayoutGuide type="bottom" id="hQc-hQ-cP0"/>
@@ -133,10 +142,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgZ-IB-Ueh">
-                                <rect key="frame" x="87" y="281.5" width="200" height="40"/>
+                                <rect key="frame" x="87.5" y="281.5" width="200" height="40"/>
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.33725490200000002" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="4gI-Qc-lOf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="4gI-Qc-lOf"/>
                                     <constraint firstAttribute="height" constant="40" id="h8C-Cf-Hzy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
@@ -152,7 +161,7 @@
                                 <color key="backgroundColor" red="0.32549019610000002" green="0.33725490200000002" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Q2h-Hn-NIy"/>
-                                    <constraint firstAttribute="width" constant="200" id="soU-Ak-SfL"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="soU-Ak-SfL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="Arabic">
@@ -204,6 +213,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="519" height="603"/>
+        <image name="logo" width="415.20001220703125" height="482.39999389648438"/>
     </resources>
 </document>

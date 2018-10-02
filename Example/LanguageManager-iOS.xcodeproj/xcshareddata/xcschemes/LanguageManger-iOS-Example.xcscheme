@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "LanguageManger-iOS_Example.app"
-               BlueprintName = "LanguageManger-iOS_Example"
-               ReferencedContainer = "container:LanguageManger-iOS.xcodeproj">
+               BuildableName = "LanguageManager-iOS_Example.app"
+               BlueprintName = "LanguageManager-iOS_Example"
+               ReferencedContainer = "container:LanguageManager-iOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "LanguageManger-iOS_Tests.xctest"
                BlueprintName = "LanguageManger-iOS_Tests"
-               ReferencedContainer = "container:LanguageManger-iOS.xcodeproj">
+               ReferencedContainer = "container:LanguageManager-iOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "LanguageManger-iOS_Tests.xctest"
                BlueprintName = "LanguageManger-iOS_Tests"
-               ReferencedContainer = "container:LanguageManger-iOS.xcodeproj">
+               ReferencedContainer = "container:LanguageManager-iOS.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "LanguageManger-iOS_Example.app"
-            BlueprintName = "LanguageManger-iOS_Example"
-            ReferencedContainer = "container:LanguageManger-iOS.xcodeproj">
+            BuildableName = "LanguageManager-iOS_Example.app"
+            BlueprintName = "LanguageManager-iOS_Example"
+            ReferencedContainer = "container:LanguageManager-iOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "LanguageManger-iOS_Example.app"
-            BlueprintName = "LanguageManger-iOS_Example"
-            ReferencedContainer = "container:LanguageManger-iOS.xcodeproj">
+            BuildableName = "LanguageManager-iOS_Example.app"
+            BlueprintName = "LanguageManager-iOS_Example"
+            ReferencedContainer = "container:LanguageManager-iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -99,9 +99,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "LanguageManger-iOS_Example.app"
-            BlueprintName = "LanguageManger-iOS_Example"
-            ReferencedContainer = "container:LanguageManger-iOS.xcodeproj">
+            BuildableName = "LanguageManager-iOS_Example.app"
+            BlueprintName = "LanguageManager-iOS_Example"
+            ReferencedContainer = "container:LanguageManager-iOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

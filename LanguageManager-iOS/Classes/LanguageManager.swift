@@ -1,9 +1,9 @@
 //
-//  LanguageManger.swift
+//  LanguageManager.swift
 //
 //  Created by abedalkareem omreyh on 10/23/17.
 //  Copyright © 2017 abedlkareem omreyh. All rights reserved.
-//  GitHub: https://github.com/Abedalkareem/LanguageManger-iOS
+//  GitHub: https://github.com/Abedalkareem/LanguageManager-iOS
 //  The MIT License (MIT)
 //
 //  Copyright (c) 2017 Abedalkareem
@@ -28,10 +28,10 @@
 
 import UIKit
 
-public class LanguageManger {
+public class LanguageManager {
     
-    /// Returns the singleton LanguageManger instance.
-    public static let shared: LanguageManger = LanguageManger()
+    /// Returns the singleton LanguageManager instance.
+    public static let shared: LanguageManager = LanguageManager()
     
     
     /// Returns the currnet language
@@ -62,6 +62,7 @@ public class LanguageManger {
             
             // swizzle the awakeFromNib from nib and localize the text in the new awakeFromNib
             UIView.localize()
+            Bundle.localize()
             
             let defaultLanguage = UserDefaults.standard.string(forKey: DefaultsKeys.defaultLanguage)
             guard defaultLanguage == nil else {
@@ -151,6 +152,8 @@ fileprivate extension UIView {
         
     }
     
+    
+    
     @objc fileprivate func swizzledAwakeFromNib() {
         swizzledAwakeFromNib()
         
@@ -168,6 +171,34 @@ fileprivate extension UIView {
     }
 }
 
+fileprivate extension Bundle {
+    fileprivate static func localize() {
+        
+        let orginalSelector = #selector(localizedString(forKey:value:table:))
+        let swizzledSelector = #selector(customLocaLizedString(forKey:value:table:))
+        
+        let orginalMethod = class_getInstanceMethod(self, orginalSelector)
+        let swizzledMethod = class_getInstanceMethod(self, swizzledSelector)
+        
+        let didAddMethod = class_addMethod(self, orginalSelector, method_getImplementation(swizzledMethod!), method_getTypeEncoding(swizzledMethod!))
+        
+        if didAddMethod {
+            class_replaceMethod(self, swizzledSelector, method_getImplementation(orginalMethod!), method_getTypeEncoding(orginalMethod!))
+        } else {
+            method_exchangeImplementations(orginalMethod!, swizzledMethod!)
+        }
+    }
+    
+    @objc  private func customLocaLizedString(forKey key:String,value:String?,table:String?)->String{
+        if let bundle = Bundle.main.path(forResource: LanguageManager.shared.currentLanguage.rawValue, ofType: "lproj"),
+            let langBundle = Bundle(path: bundle){
+            return langBundle.customLocaLizedString(forKey: key, value: value, table: table)
+        }else {
+            return Bundle.main.customLocaLizedString(forKey: key, value: value, table: table)
+        }
+    }
+}
+
 
 // MARK: String extension
 public extension String {
@@ -178,7 +209,7 @@ public extension String {
     /// - returns: The localized string
     ///
     public func localiz(comment: String = "") -> String {
-        guard let bundle = Bundle.main.path(forResource: LanguageManger.shared.currentLanguage.rawValue, ofType: "lproj") else {
+        guard let bundle = Bundle.main.path(forResource: LanguageManager.shared.currentLanguage.rawValue, ofType: "lproj") else {
             return NSLocalizedString(self, comment: comment)
         }
         
@@ -189,8 +220,8 @@ public extension String {
 }
 
 fileprivate enum DefaultsKeys {
-    static let selectedLanguage = "LanguageMangerSelectedLanguage"
-    static let defaultLanguage = "LanguageMangerDefaultLanguage"
+    static let selectedLanguage = "LanguageManagerSelectedLanguage"
+    static let defaultLanguage = "LanguageManagerDefaultLanguage"
 }
 
 // MARK: UIApplication extension

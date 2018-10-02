@@ -1,7 +1,7 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## LanguageManger-iOS
+## LanguageManager-iOS
 
 Copyright (c) 2018 Abedalkareem <abedalkareem.omreyh@yahoo.com>
 

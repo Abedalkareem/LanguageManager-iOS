@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  LanguageManger-iOS
+//  LanguageManager-iOS
 //
 //  Created by Abedalkareem on 08/09/2018.
 //  Copyright (c) 2018 Abedalkareem. All rights reserved.

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import LanguageManger_iOS
+import LanguageManager_iOS
 
 class SettingsViewController: UIViewController {
 
@@ -23,7 +23,7 @@ class SettingsViewController: UIViewController {
         let selectedLanguage: Languages = sender.tag == 1 ? .en : .ar
         
         // change the language
-        LanguageManger.shared.setLanguage(language: selectedLanguage)
+        LanguageManager.shared.setLanguage(language: selectedLanguage)
 
         // return to root view contoller and reload it
         UIApplication.topViewController!.dismiss(animated: true) {

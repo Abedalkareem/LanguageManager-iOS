@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_LanguageManger_iOS_ExampleVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_LanguageManger_iOS_ExampleVersionString[];
+FOUNDATION_EXPORT double LanguageManager_iOSVersionNumber;
+FOUNDATION_EXPORT const unsigned char LanguageManager_iOSVersionString[];
 

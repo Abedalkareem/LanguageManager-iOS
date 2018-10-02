@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/Abedalkareem/LanguageManger-iOS/blob/master/logo.png?raw=true"  width="150">  </center>
+<img src="https://github.com/Abedalkareem/LanguageManager-iOS/blob/master/logo.png?raw=true"  width="150">  </center>
 </p>
 <br>
 
@@ -10,7 +10,7 @@ Language manager used to handle change app language without restart the app
 
 <b>ScreenShots</b>
 
-<img src="https://raw.githubusercontent.com/Abedalkareem/LanguageManger-iOS/master/screenrec.gif"  width="450">
+<img src="https://raw.githubusercontent.com/Abedalkareem/LanguageManager-iOS/master/screenrec.gif"  width="450">
 
 <b>Usage</b>
 

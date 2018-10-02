@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Welcome"; ObjectID = "0VR-kg-jtL"; */
+"0VR-kg-jtL.text" = "Welcome";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "6VX-W6-39l"; */
+"6VX-W6-39l.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "English"; ObjectID = "SgZ-IB-Ueh"; */
+"SgZ-IB-Ueh.normalTitle" = "English";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."; ObjectID = "ZUK-Sx-UUK"; */
+"ZUK-Sx-UUK.text" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.";
+
+/* Class = "UILabel"; text = "Localize from storyboard"; ObjectID = "gpI-wp-dq2"; */
+"gpI-wp-dq2.text" = "Localize from storyboard";
+
+/* Class = "UIButton"; normalTitle = "Arabic"; ObjectID = "lia-Yp-ghs"; */
+"lia-Yp-ghs.normalTitle" = "Arabic";
+
+/* Class = "UIButton"; normalTitle = "Change language"; ObjectID = "sJS-WG-QxU"; */
+"sJS-WG-QxU.normalTitle" = "Change language";
+
+/* Class = "UILabel"; text = "Hi all !"; ObjectID = "zsS-q6-3yA"; */
+"zsS-q6-3yA.text" = "Hi all !";

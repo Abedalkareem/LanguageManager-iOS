@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import LanguageManger_iOS
+import LanguageManager_iOS
 
 class MainViewController: UIViewController {
 
@@ -22,7 +22,7 @@ class MainViewController: UIViewController {
         let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM"
-        dateFormatter.locale = LanguageManger.shared.appLocale
+        dateFormatter.locale = LanguageManager.shared.appLocale
         
         let month = dateFormatter.string(from: date)
         lblTest.text = month

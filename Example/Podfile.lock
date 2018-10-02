@@ -1,16 +1,16 @@
 PODS:
-  - LanguageManger-iOS (0.1.0)
+  - LanguageManager-iOS (1.0.0)
 
 DEPENDENCIES:
-  - LanguageManger-iOS (from `../`)
+  - LanguageManager-iOS (from `../`)
 
 EXTERNAL SOURCES:
-  LanguageManger-iOS:
+  LanguageManager-iOS:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LanguageManger-iOS: 3330eb1a43ac62b1eb170ad5a0ca5929de742cfd
+  LanguageManager-iOS: 224ede592e6e2e38cffa8dad452c54ed0b835513
 
-PODFILE CHECKSUM: 921e96a34b29a8f52f7ecedaec4fdfd38e32da8b
+PODFILE CHECKSUM: 86ba9d2f6a0d99379542c06ae5133dbb83d8d41e
 
 COCOAPODS: 1.5.3
