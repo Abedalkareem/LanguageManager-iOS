@@ -59,7 +59,7 @@ LanguageManger-iOS is available through [CocoaPods](https://cocoapods.org). To i
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'LanguageManger-iOS'
+pod 'LanguageManager-iOS'
 ```
 
 <b>Note</b>
