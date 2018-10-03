@@ -64,7 +64,7 @@ pod 'LanguageManager-iOS'
 
 Or you can use [Carthage](https://github.com/Carthage/Carthage).
 
-``` Carthage
+```
 github "Abedalkareem/LanguageManager-iOS"
 ```
 
