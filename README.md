@@ -62,6 +62,12 @@ it, simply add the following line to your Podfile:
 pod 'LanguageManager-iOS'
 ```
 
+Or you can use [Carthage](https://github.com/Carthage/Carthage).
+
+``` Carthage
+github "Abedalkareem/LanguageManager-iOS"
+```
+
 <b>Note</b>
 
 I'm going to be very happy if you give me a feedback or advice , thank you
