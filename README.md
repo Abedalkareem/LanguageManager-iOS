@@ -25,7 +25,7 @@ and for Arabic file :  <br>
 After that in didFinishLaunchingWithOptions inside the AppDelegate.swift set your default language that your app will run first time
 
 ```swift
-LanguageManger.shared.defaultLanguage = .en
+LanguageManager.shared.defaultLanguage = .en
 ```
 
 If you want to change the language use the ```setLanguage(language:)``` method by passing to it the new language
@@ -36,7 +36,7 @@ If you want to change the language use the ```setLanguage(language:)``` method b
     let selectedLanguage:Languages = sender.tag == 1 ? .en : .ar
 
     // change the language
-    LanguageManger.shared.setLanguage(language: selectedLanguage)
+    LanguageManager.shared.setLanguage(language: selectedLanguage)
 
     // then you must to pop all view controllers and return to root view controller then re set the root view controller 
     UIApplication.topViewController!.dismiss(animated: true) {
@@ -51,15 +51,21 @@ If you want to change the language use the ```setLanguage(language:)``` method b
 The language manager help you to support multiple languages in your app, However, there are some cases that you want to handle it yourself like some ```UILable``` or ```UITextField``` didn't change the direction, so you need to do that .
 Example:
 
-``` textAlignment =  LanguageManger.shared.isRightToLeft ? .right : .left. ```
+``` textAlignment =  LanguageManager.shared.isRightToLeft ? .right : .left. ```
 
 <b>Installation</b>
 
-LanguageManger-iOS is available through [CocoaPods](https://cocoapods.org). To install
+LanguageManager-iOS is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'LanguageManager-iOS'
+```
+
+Or you can use [Carthage](https://github.com/Carthage/Carthage).
+
+```
+github "Abedalkareem/LanguageManager-iOS"
 ```
 
 <b>Note</b>
