@@ -33,17 +33,18 @@ If you want to change the language use the ```setLanguage(language:)``` method b
 ```swift
 @IBAction func changeLanguage(_ sender: UIButton) {
 
-    let selectedLanguage:Languages = sender.tag == 1 ? .en : .ar
-
-    // change the language
-    LanguageManager.shared.setLanguage(language: selectedLanguage)
-
-    // then you must to pop all view controllers and return to root view controller then re set the root view controller 
-    UIApplication.topViewController!.dismiss(animated: true) {
-        let delegate = UIApplication.shared.delegate as! AppDelegate
+         let selectedLanguage: Languages = sender.tag == 1 ? .en : .ar
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        delegate.window?.rootViewController = storyboard.instantiateInitialViewController()
-    }
+        // the view controller that you want to show after changing the language
+        let viewController = storyboard.instantiateInitialViewController()
+        
+        // change the language
+        LanguageManager.shared.setLanguage(language: selectedLanguage, rootViewController: viewController, animation: { view in
+        // do custom animation
+            view.transform = CGAffineTransform(scaleX: 2, y: 2)
+            view.alpha = 0
+        })
 }
 ```
 
