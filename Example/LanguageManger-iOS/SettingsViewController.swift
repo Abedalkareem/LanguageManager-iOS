@@ -22,15 +22,15 @@ class SettingsViewController: UIViewController {
         
         let selectedLanguage: Languages = sender.tag == 1 ? .en : .ar
         
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
         // change the language
-        LanguageManager.shared.setLanguage(language: selectedLanguage)
+        LanguageManager.shared.setLanguage(language: selectedLanguage, rootViewController: storyboard.instantiateInitialViewController(), animation: { view in
+            view.transform = CGAffineTransform(scaleX: 2, y: 2)
+            view.alpha = 0
+        })
 
-        // return to root view contoller and reload it
-        UIApplication.topViewController!.dismiss(animated: true) {
-            let delegate = UIApplication.shared.delegate as! AppDelegate
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            delegate.window?.rootViewController = storyboard.instantiateInitialViewController()
-        }
+            
     }
     
 

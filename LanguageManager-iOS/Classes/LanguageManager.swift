@@ -95,10 +95,10 @@ public class LanguageManager {
     ///
     /// - parameter language: The language that you need from the app to run with
     ///
-    public func setLanguage(language: Languages) {
+    public func setLanguage(language: Languages, rootViewController: UIViewController? = nil, animation: ((UIView) -> Void)? = nil) {
         
         // change the dircation of the views
-        let semanticContentAttribute:UISemanticContentAttribute = isLanguageRightToLeft(language: language) ? .forceRightToLeft : .forceLeftToRight
+        let semanticContentAttribute: UISemanticContentAttribute = isLanguageRightToLeft(language: language) ? .forceRightToLeft : .forceLeftToRight
         UIView.appearance().semanticContentAttribute = semanticContentAttribute
         UITextField.appearance().semanticContentAttribute = semanticContentAttribute
         
@@ -108,6 +108,24 @@ public class LanguageManager {
         
         // set current language
         currentLanguage = language
+        
+        
+        guard let rootViewController = rootViewController else {
+            return
+        }
+    
+        
+        let snapshot = (UIApplication.shared.keyWindow?.snapshotView(afterScreenUpdates: true))!
+        rootViewController.view.addSubview(snapshot);
+        
+        UIApplication.shared.delegate?.window??.rootViewController = rootViewController
+
+        UIView.animate(withDuration: 0.5, animations: {
+            animation?(snapshot)
+        }) { _ in
+            snapshot.removeFromSuperview()
+        }
+       
     }
     
     private func isLanguageRightToLeft(language: Languages) -> Bool {
