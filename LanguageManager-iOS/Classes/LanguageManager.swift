@@ -129,8 +129,7 @@ public class LanguageManager {
     }
     
     private func isLanguageRightToLeft(language: Languages) -> Bool {
-        let rightToLeftLanguages: [Languages] = [.ar, .he, .ur, .fa, .ku, .arc]
-        return rightToLeftLanguages.contains(language)
+        return Locale.characterDirection(forLanguage: language.rawValue) == .rightToLeft
     }
     
 }
