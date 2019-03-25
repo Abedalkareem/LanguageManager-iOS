@@ -66,6 +66,7 @@ public class LanguageManager {
             
             let defaultLanguage = UserDefaults.standard.string(forKey: DefaultsKeys.defaultLanguage)
             guard defaultLanguage == nil else {
+                setLanguage(language: currentLanguage)
                 return
             }
             
@@ -102,9 +103,6 @@ public class LanguageManager {
         UIView.appearance().semanticContentAttribute = semanticContentAttribute
         UITextField.appearance().semanticContentAttribute = semanticContentAttribute
         
-        // change app language
-        UserDefaults.standard.set([language.rawValue], forKey: "AppleLanguages")
-        UserDefaults.standard.synchronize()
         
         // set current language
         currentLanguage = language
