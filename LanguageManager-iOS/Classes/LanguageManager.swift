@@ -66,6 +66,7 @@ public class LanguageManager {
             
             let defaultLanguage = UserDefaults.standard.string(forKey: DefaultsKeys.defaultLanguage)
             guard defaultLanguage == nil else {
+                setLanguage(language: currentLanguage)
                 return
             }
             
@@ -102,19 +103,13 @@ public class LanguageManager {
         UIView.appearance().semanticContentAttribute = semanticContentAttribute
         UITextField.appearance().semanticContentAttribute = semanticContentAttribute
         
-        // change app language
-        UserDefaults.standard.set([language.rawValue], forKey: "AppleLanguages")
-        UserDefaults.standard.synchronize()
-        
         // set current language
         currentLanguage = language
-        
-        
+
         guard let rootViewController = rootViewController else {
             return
         }
-    
-        
+
         let snapshot = (UIApplication.shared.keyWindow?.snapshotView(afterScreenUpdates: true))!
         rootViewController.view.addSubview(snapshot);
         
@@ -135,7 +130,7 @@ public class LanguageManager {
 }
 
 public enum Languages: String {
-    case ar,en,nl,ja,ko,vi,ru,sv,fr,es,pt,it,de,da,fi,nb,tr,el,id,ms,th,hi,hu,pl,cs,sk,uk,hr,ca,ro,he,ur,fa,ku,arc
+    case ar,en,nl,ja,ko,vi,ru,sv,fr,es,pt,it,de,da,fi,nb,tr,el,id,ms,th,hi,hu,pl,cs,sk,uk,hr,ca,ro,he,ur,fa,ku,arc,sl
     case enGB = "en-GB"
     case enAU = "en-AU"
     case enCA = "en-CA"
@@ -151,7 +146,7 @@ public enum Languages: String {
 
 // MARK: Swizzling
 fileprivate extension UIView {
-    fileprivate static func localize() {
+  static func localize() {
         
         let orginalSelector = #selector(awakeFromNib)
         let swizzledSelector = #selector(swizzledAwakeFromNib)
@@ -171,7 +166,7 @@ fileprivate extension UIView {
     
     
     
-    @objc fileprivate func swizzledAwakeFromNib() {
+  @objc func swizzledAwakeFromNib() {
         swizzledAwakeFromNib()
         
         switch self {
@@ -189,7 +184,7 @@ fileprivate extension UIView {
 }
 
 fileprivate extension Bundle {
-    fileprivate static func localize() {
+  static func localize() {
         
         let orginalSelector = #selector(localizedString(forKey:value:table:))
         let swizzledSelector = #selector(customLocaLizedString(forKey:value:table:))
@@ -225,7 +220,7 @@ public extension String {
     ///
     /// - returns: The localized string
     ///
-    public func localiz(comment: String = "") -> String {
+  func localiz(comment: String = "") -> String {
         guard let bundle = Bundle.main.path(forResource: LanguageManager.shared.currentLanguage.rawValue, ofType: "lproj") else {
             return NSLocalizedString(self, comment: comment)
         }
@@ -244,7 +239,7 @@ fileprivate enum DefaultsKeys {
 // MARK: UIApplication extension
 public extension UIApplication {
     // Get top view controller
-    public static var topViewController:UIViewController? {
+  static var topViewController:UIViewController? {
         get{
             if var topController = UIApplication.shared.keyWindow?.rootViewController {
                 while let presentedViewController = topController.presentedViewController {
