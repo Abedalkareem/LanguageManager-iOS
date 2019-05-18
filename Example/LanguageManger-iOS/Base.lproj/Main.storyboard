@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Iei-Ki-aVZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Iei-Ki-aVZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Splash View Controller-->
         <scene sceneID="Bhf-dB-jHp">
             <objects>
-                <viewController id="Iei-Ki-aVZ" customClass="SplashViewController" customModule="LanguageManger_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Iei-Ki-aVZ" customClass="SplashViewController" customModule="LanguageManager_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k6z-gy-709"/>
                         <viewControllerLayoutGuide type="bottom" id="LAB-qM-lX0"/>
@@ -62,7 +62,7 @@
         <!--Main View Controller-->
         <scene sceneID="GmF-e7-nmq">
             <objects>
-                <viewController id="hg9-fF-859" customClass="MainViewController" customModule="LanguageManger_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hg9-fF-859" customClass="MainViewController" customModule="LanguageManager_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9ji-Hp-LQU"/>
                         <viewControllerLayoutGuide type="bottom" id="rot-65-JtE"/>
@@ -105,6 +105,10 @@
                                 <color key="textColor" red="0.32549019610000002" green="0.33725490200000002" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iAi-Dx-l1k">
+                                <rect key="frame" x="47" y="194" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -132,7 +136,7 @@
         <!--Settings View Controller-->
         <scene sceneID="4Hp-cP-K4y">
             <objects>
-                <viewController id="bV5-uF-RT9" customClass="SettingsViewController" customModule="LanguageManger_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bV5-uF-RT9" customClass="SettingsViewController" customModule="LanguageManager_iOS_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ikK-T4-mtV"/>
                         <viewControllerLayoutGuide type="bottom" id="hQc-hQ-cP0"/>
@@ -213,6 +217,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="415.20001220703125" height="482.39999389648438"/>
+        <image name="logo" width="720" height="720"/>
     </resources>
 </document>

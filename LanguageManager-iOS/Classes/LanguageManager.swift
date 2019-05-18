@@ -102,7 +102,7 @@ public class LanguageManager {
         let semanticContentAttribute: UISemanticContentAttribute = isLanguageRightToLeft(language: language) ? .forceRightToLeft : .forceLeftToRight
         UIView.appearance().semanticContentAttribute = semanticContentAttribute
         UITextField.appearance().semanticContentAttribute = semanticContentAttribute
-        
+      
         // set current language
         currentLanguage = language
 
@@ -177,6 +177,10 @@ fileprivate extension UIView {
             lbl.text = lbl.text?.localiz()
         case let btn as UIButton:
             btn.setTitle(btn.title(for: .normal)?.localiz(), for: .normal)
+        case let sgmnt as UISegmentedControl:
+          (0 ..< sgmnt.numberOfSegments).forEach { sgmnt.setTitle(sgmnt.titleForSegment(at: $0)?.localiz(), forSegmentAt: $0) }
+        case let txtv as UITextView:
+          txtv.text = txtv.text?.localiz()
         default:
             break
         }
@@ -204,6 +208,10 @@ fileprivate extension Bundle {
     @objc  private func customLocaLizedString(forKey key:String,value:String?,table:String?)->String{
         if let bundle = Bundle.main.path(forResource: LanguageManager.shared.currentLanguage.rawValue, ofType: "lproj"),
             let langBundle = Bundle(path: bundle){
+            let text = langBundle.customLocaLizedString(forKey: key, value: value, table: table)
+            if text == "<unlocalized>" {
+              return key
+            }
             return langBundle.customLocaLizedString(forKey: key, value: value, table: table)
         }else {
             return Bundle.main.customLocaLizedString(forKey: key, value: value, table: table)
@@ -220,13 +228,8 @@ public extension String {
     ///
     /// - returns: The localized string
     ///
-  func localiz(comment: String = "") -> String {
-        guard let bundle = Bundle.main.path(forResource: LanguageManager.shared.currentLanguage.rawValue, ofType: "lproj") else {
-            return NSLocalizedString(self, comment: comment)
-        }
-        
-        let langBundle = Bundle(path: bundle)
-        return NSLocalizedString(self, tableName: nil, bundle: langBundle!, comment: comment)
+    func localiz(comment: String = "") -> String {
+        return NSLocalizedString(self, comment: comment)
     }
     
 }

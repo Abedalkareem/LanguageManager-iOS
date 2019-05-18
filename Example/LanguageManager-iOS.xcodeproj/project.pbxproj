@@ -35,8 +35,6 @@
 		AE394E2EA80836410C76F449 /* Pods-LanguageManager-iOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanguageManager-iOS_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LanguageManager-iOS_Example/Pods-LanguageManager-iOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B1BC72714189E51D2D2BD51D /* Pods-LanguageManager-iOS_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanguageManager-iOS_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LanguageManager-iOS_Example/Pods-LanguageManager-iOS_Example.release.xcconfig"; sourceTree = "<group>"; };
 		BB390CED6117370856698214 /* Pods-LanguageManger-iOS_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LanguageManger-iOS_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LanguageManger-iOS_Tests/Pods-LanguageManger-iOS_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C66EABFF216386EC00A8D2E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		C66EAC01216386EF00A8D2E0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		C6CA400A211CC19800D294E5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C6CA400B211CC19800D294E5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C6CA4012211CC2F100D294E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -272,8 +270,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				607FACDA1AFB9204008FA782 /* Base */,
-				C66EABFF216386EC00A8D2E0 /* en */,
-				C66EAC01216386EF00A8D2E0 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
