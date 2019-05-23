@@ -105,10 +105,23 @@
                                 <color key="textColor" red="0.32549019610000002" green="0.33725490200000002" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="decree" translatesAutoresizingMaskIntoConstraints="NO" id="cb9-da-O7h">
+                                <rect key="frame" x="67.5" y="222" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="aCD-F2-MqZ"/>
+                                    <constraint firstAttribute="width" constant="240" id="ayZ-BF-eAi"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="imageDirection">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zsS-q6-3yA" firstAttribute="top" secondItem="9ji-Hp-LQU" secondAttribute="bottom" constant="24" id="2A1-KD-wfr"/>
+                            <constraint firstItem="cb9-da-O7h" firstAttribute="top" secondItem="6VX-W6-39l" secondAttribute="bottom" constant="50" id="2Gb-o3-9Vz"/>
                             <constraint firstItem="6VX-W6-39l" firstAttribute="leading" secondItem="ZUK-Sx-UUK" secondAttribute="leading" id="4PP-u3-z5I"/>
                             <constraint firstItem="ZUK-Sx-UUK" firstAttribute="top" secondItem="zsS-q6-3yA" secondAttribute="bottom" constant="8" id="52Z-ZR-iZT"/>
                             <constraint firstItem="6VX-W6-39l" firstAttribute="top" secondItem="ZUK-Sx-UUK" secondAttribute="bottom" constant="16.5" id="Jgl-X1-xoc"/>
@@ -116,6 +129,7 @@
                             <constraint firstAttribute="trailing" secondItem="ZUK-Sx-UUK" secondAttribute="trailing" constant="16" id="Nie-CR-Sjs"/>
                             <constraint firstItem="6VX-W6-39l" firstAttribute="trailing" secondItem="ZUK-Sx-UUK" secondAttribute="trailing" id="bCB-j9-zqF"/>
                             <constraint firstItem="ZUK-Sx-UUK" firstAttribute="leading" secondItem="4rI-Ki-wUe" secondAttribute="leading" constant="16" id="bUX-ti-mbc"/>
+                            <constraint firstItem="cb9-da-O7h" firstAttribute="centerX" secondItem="4rI-Ki-wUe" secondAttribute="centerX" id="oyk-O7-B3J"/>
                             <constraint firstItem="sJS-WG-QxU" firstAttribute="centerX" secondItem="4rI-Ki-wUe" secondAttribute="centerX" id="tm3-ch-uoz"/>
                             <constraint firstItem="rot-65-JtE" firstAttribute="top" secondItem="sJS-WG-QxU" secondAttribute="bottom" constant="8" id="ysD-pF-0dk"/>
                         </constraints>
@@ -213,6 +227,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="decree" width="512" height="512"/>
         <image name="logo" width="720" height="720"/>
     </resources>
 </document>

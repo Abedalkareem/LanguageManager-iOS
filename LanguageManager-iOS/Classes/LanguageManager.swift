@@ -36,15 +36,13 @@ public class LanguageManager {
   /// Returns the currnet language
   public var currentLanguage: Languages {
     get {
-
-      guard let currentLang = UserDefaults.standard.string(forKey: DefaultsKeys.selectedLanguage) else {
+      guard let currentLang = UserDefaults.standard.string(forKey: Constants.defaultsKeys.selectedLanguage) else {
         fatalError("Did you set the default language for the app ?")
       }
       return Languages(rawValue: currentLang)!
     }
     set {
-
-      UserDefaults.standard.set(newValue.rawValue, forKey: DefaultsKeys.selectedLanguage)
+      UserDefaults.standard.set(newValue.rawValue, forKey: Constants.defaultsKeys.selectedLanguage)
     }
   }
 
@@ -52,7 +50,7 @@ public class LanguageManager {
   public var defaultLanguage: Languages {
     get {
 
-      guard let defaultLanguage = UserDefaults.standard.string(forKey: DefaultsKeys.defaultLanguage) else {
+      guard let defaultLanguage = UserDefaults.standard.string(forKey: Constants.defaultsKeys.defaultLanguage) else {
         fatalError("Did you set the default language for the app ?")
       }
       return Languages(rawValue: defaultLanguage)!
@@ -63,14 +61,14 @@ public class LanguageManager {
       UIView.localize()
       Bundle.localize()
 
-      let defaultLanguage = UserDefaults.standard.string(forKey: DefaultsKeys.defaultLanguage)
+      let defaultLanguage = UserDefaults.standard.string(forKey: Constants.defaultsKeys.defaultLanguage)
       guard defaultLanguage == nil else {
         setLanguage(language: currentLanguage)
         return
       }
 
-      UserDefaults.standard.set(newValue.rawValue, forKey: DefaultsKeys.defaultLanguage)
-      UserDefaults.standard.set(newValue.rawValue, forKey: DefaultsKeys.selectedLanguage)
+      UserDefaults.standard.set(newValue.rawValue, forKey: Constants.defaultsKeys.defaultLanguage)
+      UserDefaults.standard.set(newValue.rawValue, forKey: Constants.defaultsKeys.selectedLanguage)
       setLanguage(language: newValue)
     }
   }
@@ -99,7 +97,6 @@ public class LanguageManager {
     // change the dircation of the views
     let semanticContentAttribute: UISemanticContentAttribute = isLanguageRightToLeft(language: language) ? .forceRightToLeft : .forceLeftToRight
     UIView.appearance().semanticContentAttribute = semanticContentAttribute
-    UITextField.appearance().semanticContentAttribute = semanticContentAttribute
 
     // set current language
     currentLanguage = language
@@ -127,6 +124,8 @@ public class LanguageManager {
 
 }
 
+// MARK: - Languages
+
 public enum Languages: String {
   case ar,en,nl,ja,ko,vi,ru,sv,fr,es,pt,it,de,da,fi,nb,tr,el,id,ms,th,hi,hu,pl,cs,sk,uk,hr,ca,ro,he,ur,fa,ku,arc,sl
   case enGB = "en-GB"
@@ -141,7 +140,8 @@ public enum Languages: String {
   case zhHK = "zh-HK"
 }
 
-// MARK: Swizzling
+// MARK: - Swizzling
+
 fileprivate extension UIView {
   static func localize() {
 
@@ -200,22 +200,23 @@ fileprivate extension Bundle {
     }
   }
 
-  @objc  private func customLocaLizedString(forKey key:String,value:String?,table:String?)->String{
-    if let bundle = Bundle.main.path(forResource: LanguageManager.shared.currentLanguage.rawValue, ofType: "lproj"),
-      let langBundle = Bundle(path: bundle){
+  @objc private func customLocaLizedString(forKey key: String,value: String?,table: String?) -> String {
+    if let bundle = Bundle.main.path(forResource: LanguageManager.shared.currentLanguage.rawValue, ofType: "lproj"), let langBundle = Bundle(path: bundle) {
+
       let text = langBundle.customLocaLizedString(forKey: key, value: value, table: table)
-      if text == "<unlocalized>" {
+      if text == Constants.strings.unlocalized {
         return key
       }
       return langBundle.customLocaLizedString(forKey: key, value: value, table: table)
-    }else {
+    } else {
       return Bundle.main.customLocaLizedString(forKey: key, value: value, table: table)
     }
   }
 }
 
 
-// MARK: String extension
+// MARK: - String extension
+
 public extension String {
 
   ///
@@ -229,26 +230,80 @@ public extension String {
 
 }
 
-fileprivate enum DefaultsKeys {
-  static let selectedLanguage = "LanguageManagerSelectedLanguage"
-  static let defaultLanguage = "LanguageManagerDefaultLanguage"
+
+// MARK: - ImageDirection
+
+public enum ImageDirection: Int {
+  case fixed, leftToRight, rightToLeft
 }
 
-// MARK: UIApplication extension
-public extension UIApplication {
-  // Get top view controller
-  static var topViewController:UIViewController? {
-    get{
-      if var topController = UIApplication.shared.keyWindow?.rootViewController {
-        while let presentedViewController = topController.presentedViewController {
-          topController = presentedViewController
-        }
-        return topController
-      }else{
-        return nil
+private extension UIView {
+  ///
+  /// Change the direction of the image depeneding in the language, there is no return value for this variable.
+  /// The expectid values:
+  ///
+  /// -`fixed`: if the image must not change the direction depending on the language you need to set the value as 0.
+  ///
+  /// -`leftToRight`: if the image must change the direction depending on the language
+  /// and the image is left to right image then you need to set the value as 1.
+  ///
+  /// -`rightToLeft`: if the image must change the direction depending on the language
+  /// and the image is right to left image then you need to set the value as 2.
+  ///
+  var direction: ImageDirection {
+    set {
+      switch newValue {
+      case .fixed:
+        break
+      case .leftToRight where LanguageManager.shared.isRightToLeft:
+        transform = CGAffineTransform(scaleX: -1, y: 1)
+      case .rightToLeft where !LanguageManager.shared.isRightToLeft:
+        transform = CGAffineTransform(scaleX: -1, y: 1)
+      default:
+        break
       }
     }
+    get {
+      fatalError("There is no value return from this variable, this variable used to change the image direction depending on the langauge")
+    }
   }
-
 }
 
+@IBDesignable
+extension UIImageView {
+  @IBInspectable var imageDirection: Int {
+    set {
+      direction = ImageDirection(rawValue: newValue)!
+    }
+    get {
+      return direction.rawValue
+    }
+  }
+}
+
+@IBDesignable
+extension UIButton {
+  @IBInspectable var imageDirection: Int {
+    set {
+      direction = ImageDirection(rawValue: newValue)!
+    }
+    get {
+      return direction.rawValue
+    }
+  }
+}
+
+
+// MARK: - Constants
+
+fileprivate enum Constants {
+
+  enum defaultsKeys {
+    static let selectedLanguage = "LanguageManagerSelectedLanguage"
+    static let defaultLanguage = "LanguageManagerDefaultLanguage"
+  }
+
+  enum strings {
+    static let unlocalized = "<unlocalized>"
+  }
+}
