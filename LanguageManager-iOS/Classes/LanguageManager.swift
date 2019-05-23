@@ -270,7 +270,7 @@ private extension UIView {
 }
 
 @IBDesignable
-extension UIImageView {
+public extension UIImageView {
   @IBInspectable var imageDirection: Int {
     set {
       direction = ImageDirection(rawValue: newValue)!
@@ -282,7 +282,7 @@ extension UIImageView {
 }
 
 @IBDesignable
-extension UIButton {
+public extension UIButton {
   @IBInspectable var imageDirection: Int {
     set {
       direction = ImageDirection(rawValue: newValue)!
