@@ -58,6 +58,8 @@ and the image is left to right image then you need to set the value as 1.
 -`rightToLeft`: if the image must change the direction depending on the language
 and the image is right to left image then you need to set the value as 2.
 
+<img src="https://raw.githubusercontent.com/Abedalkareem/LanguageManager-iOS/master/ibdesignable.png"  width="450">
+
 Please check the example project to see how it works.
 
 <b>Installation</b>
