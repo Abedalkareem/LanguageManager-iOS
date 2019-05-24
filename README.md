@@ -48,11 +48,17 @@ If you want to change the language use the ```setLanguage(language:)``` method b
 }
 ```
 
-*Note <br>
-The language manager help you to support multiple languages in your app, However, there are some cases that you want to handle it yourself like some ```UILable``` or ```UITextField``` didn't change the direction, so you need to do that .
-Example:
+If you have an image and you want to change the direction of the image depending on the language, you can use image direction property, the property can be one of the following values:
 
-``` textAlignment =  LanguageManager.shared.isRightToLeft ? .right : .left. ```
+-`fixed`: if the image must not change the direction depending on the language, you need to set the value as 0.
+
+-`leftToRight`: if the image must change the direction depending on the language
+and the image is left to right image then you need to set the value as 1.
+
+-`rightToLeft`: if the image must change the direction depending on the language
+and the image is right to left image then you need to set the value as 2.
+
+Please check the example project to see how it works.
 
 <b>Installation</b>
 
