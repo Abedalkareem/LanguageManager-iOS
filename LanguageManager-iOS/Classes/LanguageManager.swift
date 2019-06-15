@@ -59,7 +59,6 @@ public class LanguageManager {
 
       // swizzle the awakeFromNib from nib and localize the text in the new awakeFromNib
       UIView.localize()
-      Bundle.localize()
 
       let defaultLanguage = UserDefaults.standard.string(forKey: Constants.defaultsKeys.defaultLanguage)
       guard defaultLanguage == nil else {
@@ -90,7 +89,11 @@ public class LanguageManager {
   ///
   /// Set the current language for the app
   ///
-  /// - parameter language: The language that you need from the app to run with
+  /// - parameter language: The language that you need from the app to run with.
+  /// - parameter rootViewController: The new view controller to show after changing the language.
+  /// - parameter animation: A closure with the current view to animate to the new view controller,
+  ///                        so you need to animate the view, move it out of the screen, change the alpha,
+  ///                        or scale it down to zero.
   ///
   public func setLanguage(language: Languages, rootViewController: UIViewController? = nil, animation: ((UIView) -> Void)? = nil) {
 
@@ -127,7 +130,8 @@ public class LanguageManager {
 // MARK: - Languages
 
 public enum Languages: String {
-  case ar,en,nl,ja,ko,vi,ru,sv,fr,es,pt,it,de,da,fi,nb,tr,el,id,ms,th,hi,hu,pl,cs,sk,uk,hr,ca,ro,he,ur,fa,ku,arc,sl
+  case ar,en,nl,ja,ko,vi,ru,sv,fr,es,pt,it,de,da,fi,nb,tr,el,id,
+       ms,th,hi,hu,pl,cs,sk,uk,hr,ca,ro,he,ur,fa,ku,arc,sl
   case enGB = "en-GB"
   case enAU = "en-AU"
   case enCA = "en-CA"
@@ -182,39 +186,6 @@ fileprivate extension UIView {
   }
 }
 
-fileprivate extension Bundle {
-  static func localize() {
-
-    let orginalSelector = #selector(localizedString(forKey:value:table:))
-    let swizzledSelector = #selector(customLocaLizedString(forKey:value:table:))
-
-    let orginalMethod = class_getInstanceMethod(self, orginalSelector)
-    let swizzledMethod = class_getInstanceMethod(self, swizzledSelector)
-
-    let didAddMethod = class_addMethod(self, orginalSelector, method_getImplementation(swizzledMethod!), method_getTypeEncoding(swizzledMethod!))
-
-    if didAddMethod {
-      class_replaceMethod(self, swizzledSelector, method_getImplementation(orginalMethod!), method_getTypeEncoding(orginalMethod!))
-    } else {
-      method_exchangeImplementations(orginalMethod!, swizzledMethod!)
-    }
-  }
-
-  @objc private func customLocaLizedString(forKey key: String,value: String?,table: String?) -> String {
-    if let bundle = Bundle.main.path(forResource: LanguageManager.shared.currentLanguage.rawValue, ofType: "lproj"), let langBundle = Bundle(path: bundle) {
-
-      let text = langBundle.customLocaLizedString(forKey: key, value: value, table: table)
-      if text == Constants.strings.unlocalized {
-        return key
-      }
-      return langBundle.customLocaLizedString(forKey: key, value: value, table: table)
-    } else {
-      return Bundle.main.customLocaLizedString(forKey: key, value: value, table: table)
-    }
-  }
-}
-
-
 // MARK: - String extension
 
 public extension String {
@@ -225,7 +196,12 @@ public extension String {
   /// - returns: The localized string
   ///
   func localiz(comment: String = "") -> String {
-    return NSLocalizedString(self, comment: comment)
+    guard let bundle = Bundle.main.path(forResource: LanguageManager.shared.currentLanguage.rawValue, ofType: "lproj") else {
+      return NSLocalizedString(self, comment: comment)
+    }
+
+    let langBundle = Bundle(path: bundle)
+    return NSLocalizedString(self, tableName: nil, bundle: langBundle!, comment: comment)
   }
 
 }
