@@ -33,26 +33,34 @@ If you want to change the language use the ```setLanguage(language:)``` method b
 ```swift
 @IBAction func changeLanguage(_ sender: UIButton) {
 
-         let selectedLanguage: Languages = sender.tag == 1 ? .en : .ar
+  let selectedLanguage: Languages = sender.tag == 1 ? .en : .ar
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        // the view controller that you want to show after changing the language
-        let viewController = storyboard.instantiateInitialViewController()
+  let storyboard = UIStoryboard(name: "Main", bundle: nil)
+  // the view controller that you want to show after changing the language
+  let viewController = storyboard.instantiateInitialViewController()
         
-        // change the language
-        LanguageManager.shared.setLanguage(language: selectedLanguage, rootViewController: viewController, animation: { view in
-        // do custom animation
-            view.transform = CGAffineTransform(scaleX: 2, y: 2)
-            view.alpha = 0
-        })
+  // change the language
+  LanguageManager.shared.setLanguage(language: selectedLanguage, rootViewController: viewController, animation: { view in
+    // do custom animation
+    view.transform = CGAffineTransform(scaleX: 2, y: 2)
+    view.alpha = 0
+  })
 }
 ```
 
-*Note <br>
-The language manager help you to support multiple languages in your app, However, there are some cases that you want to handle it yourself like some ```UILable``` or ```UITextField``` didn't change the direction, so you need to do that .
-Example:
+If you have an image and you want to change the direction of the image depending on the language, you can use image direction property, the property can be one of the following values:
 
-``` textAlignment =  LanguageManager.shared.isRightToLeft ? .right : .left. ```
+-`fixed`: if the image must not change the direction depending on the language, you need to set the value as 0.
+
+-`leftToRight`: if the image must change the direction depending on the language
+and the image is left to right image then you need to set the value as 1.
+
+-`rightToLeft`: if the image must change the direction depending on the language
+and the image is right to left image then you need to set the value as 2.
+
+<img src="https://raw.githubusercontent.com/Abedalkareem/LanguageManager-iOS/master/ibdesignable.png"  width="450">
+
+Please check the example project to see how it works.
 
 <b>Installation</b>
 
