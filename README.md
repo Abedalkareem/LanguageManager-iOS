@@ -14,6 +14,9 @@ Language manager used to handle change app language without restart the app
 
 <b>Usage</b>
 
+<a href="http://www.youtube.com/watch?v=CuZb8nUglcg">Youtube: iOS - Support multiple languages (Localization).</a> <br>
+[![Watch the video](http://img.youtube.com/vi/CuZb8nUglcg/0.jpg)](http://www.youtube.com/watch?v=CuZb8nUglcg "iOS - Support multiple languages (Localization).")
+
 First of all, remember to add the ```Localizable.strings``` to your project, after adding the ```Localizable.strings``` file, select it then go to file inspector and below localization press localize, after that go to ```PROJECT > Localisation```  then add the languages you want to support (Arabic for example), dialog will appear to ask you which resource file you want to localize, select just the ```Localizable.strings``` file. <br>  <br>
 Now, go to your storyboard and add ```UILable``` and add text to it, for example ```"Hello !"```, then go to your ```Localizable.strings``` file expand it, you will find Localizable strings file for English and Arabic, for English put just this line with the string you put in the ```UILabel``` inside the storyboard   <br>
 ```"Hello !" = "Hello !";```  <br>
