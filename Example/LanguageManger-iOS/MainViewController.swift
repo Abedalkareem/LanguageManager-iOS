@@ -11,23 +11,21 @@ import LanguageManager_iOS
 
 class MainViewController: UIViewController {
 
-    
-    @IBOutlet weak var lblTest: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  @IBOutlet weak var lblTest: UILabel!
 
-        title = "Hello !!".localiz()
-        
-        let date = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM"
-        dateFormatter.locale = LanguageManager.shared.appLocale
-        
-        let month = dateFormatter.string(from: date)
-        lblTest.text = month
-        
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
+    title = "Hello !!".localiz()
+
+    let date = Date()
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "MMMM"
+    dateFormatter.locale = LanguageManager.shared.appLocale
+
+    let month = dateFormatter.string(from: date)
+    lblTest.text = month
+
+  }
 
 }

@@ -12,17 +12,15 @@ import LanguageManager_iOS
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+  var window: UIWindow?
 
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    // Set the default language for the app
+    LanguageManager.shared.defaultLanguage = .deviceLanguage
 
-        // Set the default language for the app
-        LanguageManager.shared.defaultLanguage = .en
-
-        return true
-    }
-
+    return true
+  }
 
 }
 

@@ -30,10 +30,14 @@ import UIKit
 
 public class LanguageManager {
 
-  /// Returns the singleton LanguageManager instance.
+  ///
+  /// The singleton LanguageManager instance.
+  ///
   public static let shared: LanguageManager = LanguageManager()
 
-  /// Returns the currnet language
+  ///
+  /// The current language.
+  ///
   public var currentLanguage: Languages {
     get {
       guard let currentLang = UserDefaults.standard.string(forKey: Constants.defaultsKeys.selectedLanguage) else {
@@ -46,7 +50,11 @@ public class LanguageManager {
     }
   }
 
-  /// Returns the default language that the app will run first time
+  ///
+  /// The default language that the app will run first time.
+  /// You need to set the `defaultLanguage` in the `AppDelegate`, specifically in
+  /// the first line inside `application(_:willFinishLaunchingWithOptions:)`.
+  ///
   public var defaultLanguage: Languages {
     get {
 
@@ -66,20 +74,39 @@ public class LanguageManager {
         return
       }
 
-      UserDefaults.standard.set(newValue.rawValue, forKey: Constants.defaultsKeys.defaultLanguage)
-      UserDefaults.standard.set(newValue.rawValue, forKey: Constants.defaultsKeys.selectedLanguage)
-      setLanguage(language: newValue)
+      var language = newValue
+      if language == .deviceLanguage {
+        language = deviceLanguage ?? .en
+      }
+
+      UserDefaults.standard.set(language.rawValue, forKey: Constants.defaultsKeys.defaultLanguage)
+      UserDefaults.standard.set(language.rawValue, forKey: Constants.defaultsKeys.selectedLanguage)
+      setLanguage(language: language)
     }
   }
 
-  /// Returns the diriction of the language
+  ///
+  /// The device language is deffrent than the app language,
+  /// to get the app language use `currentLanguage`.
+  ///
+  public var deviceLanguage: Languages? {
+    get {
+
+      guard let deviceLanguage = Bundle.main.preferredLocalizations.first else {
+        return nil
+      }
+      return Languages(rawValue: deviceLanguage)
+    }
+  }
+
+  /// The diriction of the language.
   public var isRightToLeft: Bool {
     get {
       return isLanguageRightToLeft(language: currentLanguage)
     }
   }
 
-  /// Returns the app locale for use it in dates and currency
+  /// The app locale to use it in dates and currency.
   public var appLocale: Locale {
     get {
       return Locale(identifier: currentLanguage.rawValue)
@@ -87,9 +114,9 @@ public class LanguageManager {
   }
 
   ///
-  /// Set the current language for the app
+  /// Set the current language of the app
   ///
-  /// - parameter language: The language that you need from the app to run with.
+  /// - parameter language: The language that you need the app to run with.
   /// - parameter rootViewController: The new view controller to show after changing the language.
   /// - parameter animation: A closure with the current view to animate to the new view controller,
   ///                        so you need to animate the view, move it out of the screen, change the alpha,
@@ -131,7 +158,7 @@ public class LanguageManager {
 
 public enum Languages: String {
   case ar,en,nl,ja,ko,vi,ru,sv,fr,es,pt,it,de,da,fi,nb,tr,el,id,
-       ms,th,hi,hu,pl,cs,sk,uk,hr,ca,ro,he,ur,fa,ku,arc,sl
+       ms,th,hi,hu,pl,cs,sk,uk,hr,ca,ro,he,ur,fa,ku,arc,sl,ml
   case enGB = "en-GB"
   case enAU = "en-AU"
   case enCA = "en-CA"
@@ -142,6 +169,9 @@ public enum Languages: String {
   case zhHans = "zh-Hans"
   case zhHant = "zh-Hant"
   case zhHK = "zh-HK"
+  case es419 = "es-419"
+  case ptPT = "pt-PT"
+  case deviceLanguage
 }
 
 // MARK: - Swizzling
@@ -206,7 +236,6 @@ public extension String {
 
 }
 
-
 // MARK: - ImageDirection
 
 public enum ImageDirection: Int {
@@ -268,7 +297,6 @@ public extension UIButton {
     }
   }
 }
-
 
 // MARK: - Constants
 
