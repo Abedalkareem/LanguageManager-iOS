@@ -8,15 +8,15 @@ Language manager used to handle change app language without restart the app
 <br>
 
 
-<b>ScreenShots</b>
+## ScreenShots
 
 <img src="https://raw.githubusercontent.com/Abedalkareem/LanguageManager-iOS/master/screenrec.gif"  width="450">
 
-<b>LanguageManager-iOS + Lokalise</b>
+## LanguageManager-iOS + Lokalise
 
 For LanguageManger-iOS with Lokalise integration please visit the [LanguageManager-iOS-Lokalise](https://github.com/Abedalkareem/LanguageManager-iOS-Lokalise) repo.
 
-<b>Usage</b>
+## Usage
 
 <a href="http://www.youtube.com/watch?v=CuZb8nUglcg">Youtube: iOS - Support multiple languages (Localization).</a> <br>
 [![Watch the video](http://img.youtube.com/vi/CuZb8nUglcg/0.jpg)](http://www.youtube.com/watch?v=CuZb8nUglcg "iOS - Support multiple languages (Localization).")
@@ -84,12 +84,12 @@ Or you can use [Carthage](https://github.com/Carthage/Carthage).
 github "Abedalkareem/LanguageManager-iOS"
 ```
 
-<b>Note</b>
+## Note
 
 I'm going to be very happy if you give me a feedback or advice , thank you
 
 
-<b>License</b>
+## License
 
 ```
 The MIT License (MIT)
