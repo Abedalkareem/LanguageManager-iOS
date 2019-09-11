@@ -204,6 +204,10 @@ fileprivate extension UIView {
       txtf.placeholder = txtf.placeholder?.localiz()
     case let lbl as UILabel:
       lbl.text = lbl.text?.localiz()
+    case let tabbar as UITabBar:
+        if let items = tabbar.items{
+            for item in items{item.title == item.title?.localiz()}
+        }
     case let btn as UIButton:
       btn.setTitle(btn.title(for: .normal)?.localiz(), for: .normal)
     case let sgmnt as UISegmentedControl:
