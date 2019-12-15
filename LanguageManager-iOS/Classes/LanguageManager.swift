@@ -30,6 +30,10 @@ import UIKit
 
 public class LanguageManager {
 
+  public typealias Animation = ((UIView) -> Void)
+  public typealias ViewControllerFactory = ((String?) -> UIViewController)
+  public typealias WindowAndTitle = (UIWindow?, String?)
+
   ///
   /// The singleton LanguageManager instance.
   ///
@@ -41,7 +45,7 @@ public class LanguageManager {
   public var currentLanguage: Languages {
     get {
       guard let currentLang = UserDefaults.standard.string(forKey: Constants.defaultsKeys.selectedLanguage) else {
-        fatalError("Did you set the default language for the app ?")
+        fatalError("Did you set the default language for the app?")
       }
       return Languages(rawValue: currentLang)!
     }
@@ -57,9 +61,8 @@ public class LanguageManager {
   ///
   public var defaultLanguage: Languages {
     get {
-
       guard let defaultLanguage = UserDefaults.standard.string(forKey: Constants.defaultsKeys.defaultLanguage) else {
-        fatalError("Did you set the default language for the app ?")
+        fatalError("Did you set the default language for the app?")
       }
       return Languages(rawValue: defaultLanguage)!
     }
@@ -117,13 +120,41 @@ public class LanguageManager {
   /// Set the current language of the app
   ///
   /// - parameter language: The language that you need the app to run with.
-  /// - parameter rootViewController: The new view controller to show after changing the language.
+  /// - parameter windows: The windows you want to change the `rootViewController` for. if you didn't
+  ///                      set it, it will change the `rootViewController` for all the windows in the
+  ///                      scenes.
+  /// - parameter viewControllerFactory: A closure to make the `ViewController` for a specific `scene`, you can know for which
+  ///                                    `scene` you need to make the controller you can check the `title` sent to this clouser,
+  ///                                    this title is the `title` of the `scene`, so if there is 5 scenes this closure will get called 5 times
+  ///                                    for each scene window.
   /// - parameter animation: A closure with the current view to animate to the new view controller,
   ///                        so you need to animate the view, move it out of the screen, change the alpha,
   ///                        or scale it down to zero.
   ///
-  public func setLanguage(language: Languages, rootViewController: UIViewController? = nil, animation: ((UIView) -> Void)? = nil) {
+  public func setLanguage(language: Languages,
+                          for windows: [WindowAndTitle]? = nil,
+                          viewControllerFactory: ViewControllerFactory? = nil,
+                          animation: Animation? = nil) {
 
+    changeCurrentLanguageTo(language)
+
+    guard let viewControllerFactory = viewControllerFactory else {
+      return
+    }
+
+    let windowsToChange = getWindowsToChangeFrom(windows)
+
+    windowsToChange?.forEach({ windowAndTitle in
+      let (window, title) = windowAndTitle
+      let viewController = viewControllerFactory(title)
+      changeViewController(for: window,
+                           rootViewController: viewController,
+                           animation: animation)
+    })
+
+  }
+
+  private func changeCurrentLanguageTo(_ language: Languages) {
     // change the dircation of the views
     let semanticContentAttribute: UISemanticContentAttribute = isLanguageRightToLeft(language: language) ? .forceRightToLeft : .forceLeftToRight
     UIView.appearance().semanticContentAttribute = semanticContentAttribute
@@ -131,21 +162,40 @@ public class LanguageManager {
     // set current language
     currentLanguage = language
 
-    guard let rootViewController = rootViewController else {
-      return
+  }
+
+  private func getWindowsToChangeFrom(_ windows: [WindowAndTitle]?) -> [WindowAndTitle]? {
+    var windowsToChange: [WindowAndTitle]?
+    if let windows = windows {
+      windowsToChange = windows
+    } else {
+      if #available(iOS 13.0, *) {
+        windowsToChange = UIApplication.shared.connectedScenes
+          .compactMap({$0 as? UIWindowScene})
+          .map({ ($0.windows.first, $0.title) })
+      } else {
+        windowsToChange = [(UIApplication.shared.keyWindow, nil)]
+      }
     }
 
-    let snapshot = (UIApplication.shared.keyWindow?.snapshotView(afterScreenUpdates: true))!
+    return windowsToChange
+  }
+
+  private func changeViewController(for window: UIWindow?,
+                                    rootViewController: UIViewController,
+                                    animation: Animation? = nil) {
+    guard let snapshot = window?.snapshotView(afterScreenUpdates: true) else {
+      return
+    }
     rootViewController.view.addSubview(snapshot);
 
-    UIApplication.shared.delegate?.window??.rootViewController = rootViewController
+    window?.rootViewController = rootViewController
 
     UIView.animate(withDuration: 0.5, animations: {
       animation?(snapshot)
     }) { _ in
       snapshot.removeFromSuperview()
     }
-
   }
 
   private func isLanguageRightToLeft(language: Languages) -> Bool {
@@ -158,7 +208,7 @@ public class LanguageManager {
 
 public enum Languages: String {
   case ar,en,nl,ja,ko,vi,ru,sv,fr,es,pt,it,de,da,fi,nb,tr,el,id,
-       ms,th,hi,hu,pl,cs,sk,uk,hr,ca,ro,he,ur,fa,ku,arc,sl,ml
+  ms,th,hi,hu,pl,cs,sk,uk,hr,ca,ro,he,ur,fa,ku,arc,sl,ml,am
   case enGB = "en-GB"
   case enAU = "en-AU"
   case enCA = "en-CA"
@@ -205,9 +255,7 @@ fileprivate extension UIView {
     case let lbl as UILabel:
       lbl.text = lbl.text?.localiz()
     case let tabbar as UITabBar:
-        if let items = tabbar.items{
-            for item in items{item.title == item.title?.localiz()}
-        }
+      tabbar.items?.forEach({ $0.title = $0.title?.localiz() })
     case let btn as UIButton:
       btn.setTitle(btn.title(for: .normal)?.localiz(), for: .normal)
     case let sgmnt as UISegmentedControl:
@@ -280,6 +328,18 @@ private extension UIView {
 
 @IBDesignable
 public extension UIImageView {
+  ///
+  /// Change the direction of the image depeneding in the language, there is no return value for this variable.
+  /// The expectid values:
+  ///
+  /// -`fixed`: if the image must not change the direction depending on the language you need to set the value as 0.
+  ///
+  /// -`leftToRight`: if the image must change the direction depending on the language
+  /// and the image is left to right image then you need to set the value as 1.
+  ///
+  /// -`rightToLeft`: if the image must change the direction depending on the language
+  /// and the image is right to left image then you need to set the value as 2.
+  ///
   @IBInspectable var imageDirection: Int {
     set {
       direction = ImageDirection(rawValue: newValue)!
@@ -292,6 +352,18 @@ public extension UIImageView {
 
 @IBDesignable
 public extension UIButton {
+  ///
+  /// Change the direction of the image depeneding in the language, there is no return value for this variable.
+  /// The expectid values:
+  ///
+  /// -`fixed`: if the image must not change the direction depending on the language you need to set the value as 0.
+  ///
+  /// -`leftToRight`: if the image must change the direction depending on the language
+  /// and the image is left to right image then you need to set the value as 1.
+  ///
+  /// -`rightToLeft`: if the image must change the direction depending on the language
+  /// and the image is right to left image then you need to set the value as 2.
+  ///
   @IBInspectable var imageDirection: Int {
     set {
       direction = ImageDirection(rawValue: newValue)!

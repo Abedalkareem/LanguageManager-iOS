@@ -20,13 +20,16 @@ class SettingsViewController: UIViewController {
 
     let selectedLanguage: Languages = sender.tag == 1 ? .en : .ar
 
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-
     // change the language
-    LanguageManager.shared.setLanguage(language: selectedLanguage, rootViewController: storyboard.instantiateInitialViewController(), animation: { view in
+    LanguageManager.shared.setLanguage(language: selectedLanguage,
+                                       viewControllerFactory: { title -> UIViewController in
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      // the view controller that you want to show after changing the language
+      return storyboard.instantiateInitialViewController()!
+    }) { view in
       view.transform = CGAffineTransform(scaleX: 2, y: 2)
       view.alpha = 0
-    })
+    }
 
   }
 
