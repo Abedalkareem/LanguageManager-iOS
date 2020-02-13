@@ -27,6 +27,7 @@ class SettingsViewController: UIViewController {
       // the view controller that you want to show after changing the language
       return storyboard.instantiateInitialViewController()!
     }) { view in
+      // do custom animation
       view.transform = CGAffineTransform(scaleX: 2, y: 2)
       view.alpha = 0
     }
