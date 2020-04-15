@@ -26,6 +26,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
+//Generate it from main directory: find . -type f -name \*.swift -print0 | xargs -0 genstrings -a -o Base.lproj
+
 import UIKit
 
 public class LanguageManager {
@@ -136,8 +138,13 @@ public class LanguageManager {
                           viewControllerFactory: ViewControllerFactory? = nil,
                           animation: Animation? = nil) {
 
+    let currLan = self.currentLanguage
     changeCurrentLanguageTo(language)
-
+    
+    DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(200)) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.defaultsKeys.languageChangedNotifcation), object:nil, userInfo:["oldLanguage" : currLan, "newLanguage" : language])
+    }
+    
     guard let viewControllerFactory = viewControllerFactory else {
       return
     }
@@ -285,8 +292,90 @@ public extension String {
     let langBundle = Bundle(path: bundle)
     return NSLocalizedString(self, tableName: nil, bundle: langBundle!, comment: comment)
   }
-
 }
+
+
+// MARK: - NSNumber extension
+
+public extension NSNumber {
+    
+    ///
+    /// Localize the number to the selected language. Takes a param for how much fractionsal digits it should show after dot/point
+    ///
+    ///
+    /// - returns: The localized string
+    ///
+    func localiz(comment: String = "", fractionDigits: Int = 2) -> String {
+
+        let nf = NumberFormatter()
+        nf.numberStyle = .decimal
+        nf.maximumFractionDigits = fractionDigits
+        nf.minimumFractionDigits = fractionDigits
+        nf.locale = Locale(identifier: LanguageManager.shared.currentLanguage.rawValue)
+        return nf.string(from: self) ?? ""
+    }
+}
+
+// MARK: - NSObject extension
+//Ref: https://stackoverflow.com/questions/47053536/how-to-use-undef-directive-in-swift-2-3
+//Ref 2: https://stackoverflow.com/questions/33696489/overriding-ns-methods-in-swift/33697088#33697088
+
+extension NSObject {
+    
+    ///
+    /// Overrides the Foundation's global method NSLocalizedString,
+    ///
+    /// IMPORTANT: Will only be helpful you are going to use NSLocalizedString inside classes, outside classes, out of luck! Use localiz() method outside class.
+    /// This needs a workaround when working with closures, because swift will expect of you to use the NSLocalizedString with self like so, self.NSLocalizedString("mystring",comment:"").
+    /// The workaround in this scenario is to assign the string to a let/var outside the closure, then use it inside closure
+    ///
+    /// - returns: The localized string
+    ///
+    func NSLocalizedString(_ key: String, comment: String) -> String {
+        return key.localiz(comment: comment)
+    }
+    /// For property initializers the compiler will use the static function, that's why it's important to set them both. Ex: let myStr = NSLocalizedString("mystring",comment:"")
+    static func NSLocalizedString(_ key: String, comment: String) -> String {
+        return key.localiz(comment: comment)
+    }
+}
+
+
+// MARK: - Bundle extension, swizzling
+
+extension Bundle {
+    
+    ///
+    /// Localize the current string to the selected language, by swizzling  Bundle.main.localizedString method.
+    ///
+    /// Example Usage: title = Bundle.main.localizedString(forKey: "Hello bundle localize !!", value:nil, table: nil)
+    ///
+    /// - returns: The localized string
+    ///
+    static func swizzleLocalization() {
+        let orginalSelector = #selector(localizedString(forKey:value:table:))
+        
+        guard let orginalMethod = class_getInstanceMethod(self, orginalSelector) else { return }
+
+        let mySelector = #selector(myLocaLizedString(forKey:value:table:))
+        guard let myMethod = class_getInstanceMethod(self, mySelector) else { return }
+
+        if class_addMethod(self, orginalSelector, method_getImplementation(myMethod), method_getTypeEncoding(myMethod)) {
+            class_replaceMethod(self, mySelector, method_getImplementation(orginalMethod), method_getTypeEncoding(orginalMethod))
+        } else {
+            method_exchangeImplementations(orginalMethod, myMethod)
+        }
+    }
+
+    @objc private func myLocaLizedString(forKey key: String,value: String?, table: String?) -> String {
+        
+        guard let bundlePath = Bundle.main.path(forResource: LanguageManager.shared.currentLanguage.rawValue, ofType: "lproj"), let bundle = Bundle(path: bundlePath) else {
+                return Bundle.main.myLocaLizedString(forKey: key, value: value, table: table)
+        }
+        return bundle.myLocaLizedString(forKey: key, value: value, table: table)
+    }
+}
+
 
 // MARK: - ImageDirection
 
@@ -381,6 +470,7 @@ fileprivate enum Constants {
   enum defaultsKeys {
     static let selectedLanguage = "LanguageManagerSelectedLanguage"
     static let defaultLanguage = "LanguageManagerDefaultLanguage"
+    static let languageChangedNotifcation = "LanguageManagerDidChangeNotification"
   }
 
   enum strings {
