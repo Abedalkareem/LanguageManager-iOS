@@ -87,10 +87,17 @@ github "Abedalkareem/LanguageManager-iOS"
 
 You can also use [Swift Package Manager](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app).
 
-## Note
+## Support me 🚀
 
-I'm going to be very happy if you give me a feedback or advice , thank you
+You can support this project by:  
 
+1- Checking my [apps](https://apps.apple.com/us/developer/id928910207).  
+2- Star the repo.  
+3- Share the repo with your friends.  
+
+## Follow me ❤️
+
+[Facebook](https://www.facebook.com/Abedalkareem.Omreyh/) | [Twitter](http://twitter.com/abedalkareemomr) | [Instagram](http://instagram.com/abedalkareemomreyh/) | [Youtube](https://www.youtube.com/user/AbedalkareemOmreyh)
 
 ## License
 
