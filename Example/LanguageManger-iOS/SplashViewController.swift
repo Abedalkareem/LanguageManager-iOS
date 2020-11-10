@@ -16,6 +16,5 @@ class SplashViewController: UIViewController {
       self.performSegue(withIdentifier: "nextPage", sender: self)
     }
   }
-  
 }
 

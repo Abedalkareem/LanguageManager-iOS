@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11B3A73E4578B91E2F4920CC570838A6 /* UIView+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1721C4E1B192A8767D4549567595430 /* UIView+Swizzling.swift */; };
+		213FA881AB9542703E24AF2690072771 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7DEDBCCF59BB3BF45701A91911348 /* LanguageManager.swift */; };
+		46060D79DB408D542E65C4A7A1EB5126 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F14EF2A04BE937DA9BBB231B0CD71A /* Languages.swift */; };
+		4A683F8EDC6300C52CF9F352ACF2EF19 /* UIButton+Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C803392DD9DF7F2ABADB37A35A7C4BC /* UIButton+Direction.swift */; };
 		6A813D5F8997829B205FBE1756ACAB9C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		6E62AC6232729A1E2B5FA3F63946F7C6 /* LanguageManager-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2356046A0C984A0C6D3294D746A2FF0 /* LanguageManager-iOS-dummy.m */; };
-		7B4473E0F45832797E80E0784842E694 /* LanguageManager-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E50945BE7FBF1324329E3431A6115F7 /* LanguageManager-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		91973C0B57ED4CA90557260897727BC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		7CE49257681884529B0F85E0BD9722E9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160D9174ACA3D2CF7B462C1CCCD375D2 /* Constants.swift */; };
+		A81EE85A73400645F3E1AD68182421F8 /* ViewDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F747641E6B58A7BC476A4286F4D6B9E /* ViewDirection.swift */; };
 		B73A679FBBC8CEAA3034FF21ED299151 /* Pods-LanguageManager-iOS_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B292F0812AA9D68E1111803CFF7E52F /* Pods-LanguageManager-iOS_Example-dummy.m */; };
-		C66934BB255A741900BC6DC6 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66934BA255A741900BC6DC6 /* LanguageManager.swift */; };
-		C66934C0255A744900BC6DC6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66934BF255A744900BC6DC6 /* Constants.swift */; };
-		C66934C4255A764000BC6DC6 /* ViewDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66934C3255A764000BC6DC6 /* ViewDirection.swift */; };
-		C66934CA255A76BF00BC6DC6 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66934C9255A76BF00BC6DC6 /* String+Helpers.swift */; };
-		C66934CE255A774400BC6DC6 /* UIImageView+Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66934CD255A774400BC6DC6 /* UIImageView+Direction.swift */; };
-		C66934D2255A775400BC6DC6 /* UIButton+Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66934D1255A775400BC6DC6 /* UIButton+Direction.swift */; };
-		C66934D6255A778400BC6DC6 /* UIView+Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66934D5255A778400BC6DC6 /* UIView+Direction.swift */; };
-		C66934DA255A77D000BC6DC6 /* UIView+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66934D9255A77D000BC6DC6 /* UIView+Swizzling.swift */; };
-		C66934DE255A77FC00BC6DC6 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66934DD255A77FC00BC6DC6 /* Languages.swift */; };
+		CBB1505F1C3FBF0CC01BEDD5B6D51062 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C82B9B7092A7F14030D33D3DB11453 /* String+Helpers.swift */; };
+		D14B8683DD68E24EB26CDA31CC841035 /* UIImageView+Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DEF9A288472311CEB5BAA08C2965B /* UIImageView+Direction.swift */; };
+		E78ECC09A7E3AF010CBFB3D024F235E4 /* LanguageManager-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F20E2CB47F279CBE65C915231D7C23 /* LanguageManager-iOS-dummy.m */; };
+		E7B360518F667D0FF38CCF6C1B5D48D3 /* LanguageManager-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 701DDBF51C8631530956F70DB2D35CB6 /* LanguageManager-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E857241AFE212E9E2D256447C9065042 /* UIView+Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B9BF23DF20D1AE035B9B308451EAF /* UIView+Direction.swift */; };
+		EB1F84F666581CF3B5D75753E5EDE521 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		F2B8FDE5BB2EBD79C6C2D5D7FB502CB2 /* Pods-LanguageManager-iOS_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EF68026E129565E86E3CC495C723575 /* Pods-LanguageManager-iOS_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -35,45 +35,46 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02BECC6E80F99CECD55A7B7039C8916A /* LanguageManager-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "LanguageManager-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		0AF9274FC5873EE81F26B0A4D4306482 /* LanguageManager-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "LanguageManager-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		157B8DA199C01DDBD3BD9F23357C57ED /* Pods-LanguageManager-iOS_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LanguageManager-iOS_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		160D9174ACA3D2CF7B462C1CCCD375D2 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2F747641E6B58A7BC476A4286F4D6B9E /* ViewDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewDirection.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		392AA4791871C410795C2882C7F568D5 /* Pods-LanguageManager-iOS_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LanguageManager-iOS_Example-Info.plist"; sourceTree = "<group>"; };
 		3B292F0812AA9D68E1111803CFF7E52F /* Pods-LanguageManager-iOS_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LanguageManager-iOS_Example-dummy.m"; sourceTree = "<group>"; };
-		6473C16F43F7217C13AEA5FBA6C8247F /* LanguageManager_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LanguageManager_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C803392DD9DF7F2ABADB37A35A7C4BC /* UIButton+Direction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+Direction.swift"; sourceTree = "<group>"; };
+		5FF75C1D961AD18FC12D948761E80E72 /* LanguageManager-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LanguageManager-iOS-Info.plist"; sourceTree = "<group>"; };
+		6473C16F43F7217C13AEA5FBA6C8247F /* LanguageManager_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LanguageManager_iOS.framework; path = "LanguageManager-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A651EA65E56796162D54FB002744850 /* LanguageManager-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "LanguageManager-iOS.modulemap"; sourceTree = "<group>"; };
+		701DDBF51C8631530956F70DB2D35CB6 /* LanguageManager-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LanguageManager-iOS-umbrella.h"; sourceTree = "<group>"; };
+		71F20E2CB47F279CBE65C915231D7C23 /* LanguageManager-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LanguageManager-iOS-dummy.m"; sourceTree = "<group>"; };
+		73C8D4381B85A50332261B3F8FA60C04 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		7EF68026E129565E86E3CC495C723575 /* Pods-LanguageManager-iOS_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LanguageManager-iOS_Example-umbrella.h"; sourceTree = "<group>"; };
-		8E50945BE7FBF1324329E3431A6115F7 /* LanguageManager-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LanguageManager-iOS-umbrella.h"; sourceTree = "<group>"; };
-		90A8E812B31DBE4816BA97A0C8A1CE86 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		90C059F01FF0A0BF4C78FD03F43EFA2A /* LanguageManager-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "LanguageManager-iOS.modulemap"; sourceTree = "<group>"; };
-		94C9AE8EBF7D220456C35840D569A455 /* LanguageManager-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "LanguageManager-iOS.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7FBF5DE369B8A17E4C47791F22E28A3C /* LanguageManager-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LanguageManager-iOS-prefix.pch"; sourceTree = "<group>"; };
+		81C7DEDBCCF59BB3BF45701A91911348 /* LanguageManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		988DEF9A288472311CEB5BAA08C2965B /* UIImageView+Direction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImageView+Direction.swift"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1721C4E1B192A8767D4549567595430 /* UIView+Swizzling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Swizzling.swift"; sourceTree = "<group>"; };
 		A8ABC9D969AE2467919221E6EF5720F5 /* Pods-LanguageManager-iOS_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LanguageManager-iOS_Example.release.xcconfig"; sourceTree = "<group>"; };
 		AA8CB700112C52CFBDAF49BD6B3B5818 /* Pods-LanguageManager-iOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LanguageManager-iOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C2B8F6D1CF878197661C40C19EFDAA59 /* Pods_LanguageManager_iOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LanguageManager_iOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC2B9BF23DF20D1AE035B9B308451EAF /* UIView+Direction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Direction.swift"; sourceTree = "<group>"; };
+		C2B8F6D1CF878197661C40C19EFDAA59 /* Pods_LanguageManager_iOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LanguageManager_iOS_Example.framework; path = "Pods-LanguageManager-iOS_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C43ACB7DF242B9A6B733DFCCB24A10EA /* Pods-LanguageManager-iOS_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LanguageManager-iOS_Example-frameworks.sh"; sourceTree = "<group>"; };
-		C657BE0017F7B64C55793A78B878C7CB /* LanguageManager-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LanguageManager-iOS-Info.plist"; sourceTree = "<group>"; };
-		C66934BA255A741900BC6DC6 /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
-		C66934BF255A744900BC6DC6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		C66934C3255A764000BC6DC6 /* ViewDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDirection.swift; sourceTree = "<group>"; };
-		C66934C9255A76BF00BC6DC6 /* String+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
-		C66934CD255A774400BC6DC6 /* UIImageView+Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Direction.swift"; sourceTree = "<group>"; };
-		C66934D1255A775400BC6DC6 /* UIButton+Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Direction.swift"; sourceTree = "<group>"; };
-		C66934D5255A778400BC6DC6 /* UIView+Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Direction.swift"; sourceTree = "<group>"; };
-		C66934D9255A77D000BC6DC6 /* UIView+Swizzling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Swizzling.swift"; sourceTree = "<group>"; };
-		C66934DD255A77FC00BC6DC6 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		C9421D4AC2ADF598417930626C2DD1F8 /* Pods-LanguageManager-iOS_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LanguageManager-iOS_Example.modulemap"; sourceTree = "<group>"; };
-		D8A50494C87D2E9C79BB1DFF0DBBC395 /* LanguageManager-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LanguageManager-iOS-prefix.pch"; sourceTree = "<group>"; };
+		D26F7473D5EC3B51ADFCCE44BED6F539 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		E03B8DA9DFEF125FDA5E13C49D5603F9 /* Pods-LanguageManager-iOS_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LanguageManager-iOS_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		E2356046A0C984A0C6D3294D746A2FF0 /* LanguageManager-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LanguageManager-iOS-dummy.m"; sourceTree = "<group>"; };
-		F61C5B4BEA77740A53B6121ED58D2791 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		F962789B0B708CEF2915B9606334D020 /* LanguageManager-iOS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = "LanguageManager-iOS.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E9133DEC3F3445F4BDA68CE88743B22A /* LanguageManager-iOS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = "LanguageManager-iOS.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F6F14EF2A04BE937DA9BBB231B0CD71A /* Languages.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
+		F9C82B9B7092A7F14030D33D3DB11453 /* String+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0735F5145A6BE92943EDCD5C2D9CBF0A /* Frameworks */ = {
+		1C159A265797B95966DECCEB5F50BE46 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91973C0B57ED4CA90557260897727BC2 /* Foundation.framework in Frameworks */,
+				EB1F84F666581CF3B5D75753E5EDE521 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,12 +89,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0BBD6AF5A5CA25EC39A0624AC64D2563 /* Development Pods */ = {
+		103CA958FA71C833E45AEC2C1216466C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				AE1A7063044FD09658E6941A1B6191E3 /* LanguageManager-iOS */,
+				5A9DF36485C04BF6CEBB444D06F4609A /* Extensions */,
 			);
-			name = "Development Pods";
+			name = Helpers;
+			path = "LanguageManager-iOS/Classes/Helpers";
+			sourceTree = "<group>";
+		};
+		18457F47B50D73CF216CB4F1AD87ADFC /* LanguageManager-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				897A6D4431014572308508B9B32A8177 /* Constants */,
+				103CA958FA71C833E45AEC2C1216466C /* Helpers */,
+				3BDB0C8C04BB121B2101A22308AC451D /* Main */,
+				EB4B851453E2D615874FB4A43D26A5EC /* Pod */,
+				31A18511B7AC235B44F372B1D57E57D5 /* Support Files */,
+			);
+			name = "LanguageManager-iOS";
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		31A18511B7AC235B44F372B1D57E57D5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A651EA65E56796162D54FB002744850 /* LanguageManager-iOS.modulemap */,
+				71F20E2CB47F279CBE65C915231D7C23 /* LanguageManager-iOS-dummy.m */,
+				5FF75C1D961AD18FC12D948761E80E72 /* LanguageManager-iOS-Info.plist */,
+				7FBF5DE369B8A17E4C47791F22E28A3C /* LanguageManager-iOS-prefix.pch */,
+				701DDBF51C8631530956F70DB2D35CB6 /* LanguageManager-iOS-umbrella.h */,
+				0AF9274FC5873EE81F26B0A4D4306482 /* LanguageManager-iOS.debug.xcconfig */,
+				02BECC6E80F99CECD55A7B7039C8916A /* LanguageManager-iOS.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/LanguageManager-iOS";
 			sourceTree = "<group>";
 		};
 		31B456F29FAC9A1729D3898C1FCC27DE /* Targets Support Files */ = {
@@ -102,6 +132,28 @@
 				654177293B6B8BD9A99CFA3AA665462F /* Pods-LanguageManager-iOS_Example */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3BDB0C8C04BB121B2101A22308AC451D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				81C7DEDBCCF59BB3BF45701A91911348 /* LanguageManager.swift */,
+			);
+			name = Main;
+			path = "LanguageManager-iOS/Classes/Main";
+			sourceTree = "<group>";
+		};
+		5A9DF36485C04BF6CEBB444D06F4609A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F9C82B9B7092A7F14030D33D3DB11453 /* String+Helpers.swift */,
+				3C803392DD9DF7F2ABADB37A35A7C4BC /* UIButton+Direction.swift */,
+				988DEF9A288472311CEB5BAA08C2965B /* UIImageView+Direction.swift */,
+				BC2B9BF23DF20D1AE035B9B308451EAF /* UIView+Direction.swift */,
+				A1721C4E1B192A8767D4549567595430 /* UIView+Swizzling.swift */,
+			);
+			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		654177293B6B8BD9A99CFA3AA665462F /* Pods-LanguageManager-iOS_Example */ = {
@@ -121,14 +173,23 @@
 			path = "Target Support Files/Pods-LanguageManager-iOS_Example";
 			sourceTree = "<group>";
 		};
-		73A58E91F2C8E12305CDB72CFBBC0EC1 /* Pod */ = {
+		893DE626FD4330BFE497ACABD808E1E0 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F962789B0B708CEF2915B9606334D020 /* LanguageManager-iOS.podspec */,
-				90A8E812B31DBE4816BA97A0C8A1CE86 /* LICENSE */,
-				F61C5B4BEA77740A53B6121ED58D2791 /* README.md */,
+				18457F47B50D73CF216CB4F1AD87ADFC /* LanguageManager-iOS */,
 			);
-			name = Pod;
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		897A6D4431014572308508B9B32A8177 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				160D9174ACA3D2CF7B462C1CCCD375D2 /* Constants.swift */,
+				F6F14EF2A04BE937DA9BBB231B0CD71A /* Languages.swift */,
+				2F747641E6B58A7BC476A4286F4D6B9E /* ViewDirection.swift */,
+			);
+			name = Constants;
+			path = "LanguageManager-iOS/Classes/Constants";
 			sourceTree = "<group>";
 		};
 		A1AACFD821444D5547AE580D7B02B108 /* Products */ = {
@@ -140,19 +201,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AE1A7063044FD09658E6941A1B6191E3 /* LanguageManager-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				C66934B9255A741900BC6DC6 /* Main */,
-				C66934C7255A767400BC6DC6 /* Helpers */,
-				C66934BE255A744100BC6DC6 /* Constants */,
-				73A58E91F2C8E12305CDB72CFBBC0EC1 /* Pod */,
-				C5F7EC63BDEA4474E900C7D7B489D4B5 /* Support Files */,
-			);
-			name = "LanguageManager-iOS";
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,66 +209,11 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		C5F7EC63BDEA4474E900C7D7B489D4B5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				90C059F01FF0A0BF4C78FD03F43EFA2A /* LanguageManager-iOS.modulemap */,
-				94C9AE8EBF7D220456C35840D569A455 /* LanguageManager-iOS.xcconfig */,
-				E2356046A0C984A0C6D3294D746A2FF0 /* LanguageManager-iOS-dummy.m */,
-				C657BE0017F7B64C55793A78B878C7CB /* LanguageManager-iOS-Info.plist */,
-				D8A50494C87D2E9C79BB1DFF0DBBC395 /* LanguageManager-iOS-prefix.pch */,
-				8E50945BE7FBF1324329E3431A6115F7 /* LanguageManager-iOS-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/LanguageManager-iOS";
-			sourceTree = "<group>";
-		};
-		C66934B9255A741900BC6DC6 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				C66934BA255A741900BC6DC6 /* LanguageManager.swift */,
-			);
-			name = Main;
-			path = "LanguageManager-iOS/Classes/Main";
-			sourceTree = "<group>";
-		};
-		C66934BE255A744100BC6DC6 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				C66934C3255A764000BC6DC6 /* ViewDirection.swift */,
-				C66934BF255A744900BC6DC6 /* Constants.swift */,
-				C66934DD255A77FC00BC6DC6 /* Languages.swift */,
-			);
-			name = Constants;
-			path = "LanguageManager-iOS/Classes/Constants";
-			sourceTree = "<group>";
-		};
-		C66934C7255A767400BC6DC6 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				C66934C8255A76AC00BC6DC6 /* Extensions */,
-			);
-			name = Helpers;
-			path = "LanguageManager-iOS/Classes/Helpers";
-			sourceTree = "<group>";
-		};
-		C66934C8255A76AC00BC6DC6 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				C66934C9255A76BF00BC6DC6 /* String+Helpers.swift */,
-				C66934CD255A774400BC6DC6 /* UIImageView+Direction.swift */,
-				C66934D1255A775400BC6DC6 /* UIButton+Direction.swift */,
-				C66934D5255A778400BC6DC6 /* UIView+Direction.swift */,
-				C66934D9255A77D000BC6DC6 /* UIView+Swizzling.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				0BBD6AF5A5CA25EC39A0624AC64D2563 /* Development Pods */,
+				893DE626FD4330BFE497ACABD808E1E0 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				A1AACFD821444D5547AE580D7B02B108 /* Products */,
 				31B456F29FAC9A1729D3898C1FCC27DE /* Targets Support Files */,
@@ -235,6 +228,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EB4B851453E2D615874FB4A43D26A5EC /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E9133DEC3F3445F4BDA68CE88743B22A /* LanguageManager-iOS.podspec */,
+				D26F7473D5EC3B51ADFCCE44BED6F539 /* LICENSE */,
+				73C8D4381B85A50332261B3F8FA60C04 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -246,11 +249,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3FA34DB36FD9BFB4EFFD60EDD4EA311E /* Headers */ = {
+		88E8F7E5202B0E1A551582E3D1A2A3F3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B4473E0F45832797E80E0784842E694 /* LanguageManager-iOS-umbrella.h in Headers */,
+				E7B360518F667D0FF38CCF6C1B5D48D3 /* LanguageManager-iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,12 +262,12 @@
 /* Begin PBXNativeTarget section */
 		75F1EA88CB9544AB5CBE20DEC9A011AE /* LanguageManager-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4D8B86BEAF47408A8C59A6A96F6D9C5 /* Build configuration list for PBXNativeTarget "LanguageManager-iOS" */;
+			buildConfigurationList = FB63131156FDF9C0BF01BE087BDCC700 /* Build configuration list for PBXNativeTarget "LanguageManager-iOS" */;
 			buildPhases = (
-				3FA34DB36FD9BFB4EFFD60EDD4EA311E /* Headers */,
-				978FC02D09CC84B9716D8A551CC55A6D /* Sources */,
-				0735F5145A6BE92943EDCD5C2D9CBF0A /* Frameworks */,
-				CD3EE78CAD4FF4F0D612592A5806AA40 /* Resources */,
+				88E8F7E5202B0E1A551582E3D1A2A3F3 /* Headers */,
+				DDE7EF74A03A7996EF1E3B96FC256254 /* Sources */,
+				1C159A265797B95966DECCEB5F50BE46 /* Frameworks */,
+				D71DFDD5BCB90E90B082274B61C95F89 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -302,11 +305,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
-				TargetAttributes = {
-					75F1EA88CB9544AB5CBE20DEC9A011AE = {
-						LastSwiftMigration = 1200;
-					};
-				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -314,6 +312,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = A1AACFD821444D5547AE580D7B02B108 /* Products */;
@@ -334,7 +333,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD3EE78CAD4FF4F0D612592A5806AA40 /* Resources */ = {
+		D71DFDD5BCB90E90B082274B61C95F89 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -352,20 +351,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		978FC02D09CC84B9716D8A551CC55A6D /* Sources */ = {
+		DDE7EF74A03A7996EF1E3B96FC256254 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C66934D2255A775400BC6DC6 /* UIButton+Direction.swift in Sources */,
-				C66934CA255A76BF00BC6DC6 /* String+Helpers.swift in Sources */,
-				6E62AC6232729A1E2B5FA3F63946F7C6 /* LanguageManager-iOS-dummy.m in Sources */,
-				C66934DA255A77D000BC6DC6 /* UIView+Swizzling.swift in Sources */,
-				C66934CE255A774400BC6DC6 /* UIImageView+Direction.swift in Sources */,
-				C66934BB255A741900BC6DC6 /* LanguageManager.swift in Sources */,
-				C66934C4255A764000BC6DC6 /* ViewDirection.swift in Sources */,
-				C66934D6255A778400BC6DC6 /* UIView+Direction.swift in Sources */,
-				C66934C0255A744900BC6DC6 /* Constants.swift in Sources */,
-				C66934DE255A77FC00BC6DC6 /* Languages.swift in Sources */,
+				7CE49257681884529B0F85E0BD9722E9 /* Constants.swift in Sources */,
+				E78ECC09A7E3AF010CBFB3D024F235E4 /* LanguageManager-iOS-dummy.m in Sources */,
+				213FA881AB9542703E24AF2690072771 /* LanguageManager.swift in Sources */,
+				46060D79DB408D542E65C4A7A1EB5126 /* Languages.swift in Sources */,
+				CBB1505F1C3FBF0CC01BEDD5B6D51062 /* String+Helpers.swift in Sources */,
+				4A683F8EDC6300C52CF9F352ACF2EF19 /* UIButton+Direction.swift in Sources */,
+				D14B8683DD68E24EB26CDA31CC841035 /* UIImageView+Direction.swift in Sources */,
+				E857241AFE212E9E2D256447C9065042 /* UIView+Direction.swift in Sources */,
+				11B3A73E4578B91E2F4920CC570838A6 /* UIView+Swizzling.swift in Sources */,
+				A81EE85A73400645F3E1AD68182421F8 /* ViewDirection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +380,38 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		33B30375B2B1406C2D129466CA63700C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02BECC6E80F99CECD55A7B7039C8916A /* LanguageManager-iOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LanguageManager-iOS/LanguageManager-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LanguageManager-iOS/LanguageManager-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LanguageManager-iOS/LanguageManager-iOS.modulemap";
+				PRODUCT_MODULE_NAME = LanguageManager_iOS;
+				PRODUCT_NAME = LanguageManager_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		412B51E64906F548F7BA05F4B04761FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AA8CB700112C52CFBDAF49BD6B3B5818 /* Pods-LanguageManager-iOS_Example.debug.xcconfig */;
@@ -414,11 +445,10 @@
 			};
 			name = Debug;
 		};
-		444A982B5FE09467D7991E0049A4E64E /* Release */ = {
+		565D359786B5E4B39F51B2CCC31EB4CA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94C9AE8EBF7D220456C35840D569A455 /* LanguageManager-iOS.xcconfig */;
+			baseConfigurationReference = 0AF9274FC5873EE81F26B0A4D4306482 /* LanguageManager-iOS.debug.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -441,11 +471,10 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		B0087CB4594321EF41619F3181FE120E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -500,7 +529,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -604,39 +634,6 @@
 			};
 			name = Release;
 		};
-		FAF6F3EC6D39A414FB0B6254D592767F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94C9AE8EBF7D220456C35840D569A455 /* LanguageManager-iOS.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LanguageManager-iOS/LanguageManager-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LanguageManager-iOS/LanguageManager-iOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LanguageManager-iOS/LanguageManager-iOS.modulemap";
-				PRODUCT_MODULE_NAME = LanguageManager_iOS;
-				PRODUCT_NAME = LanguageManager_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -658,11 +655,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4D8B86BEAF47408A8C59A6A96F6D9C5 /* Build configuration list for PBXNativeTarget "LanguageManager-iOS" */ = {
+		FB63131156FDF9C0BF01BE087BDCC700 /* Build configuration list for PBXNativeTarget "LanguageManager-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FAF6F3EC6D39A414FB0B6254D592767F /* Debug */,
-				444A982B5FE09467D7991E0049A4E64E /* Release */,
+				565D359786B5E4B39F51B2CCC31EB4CA /* Debug */,
+				33B30375B2B1406C2D129466CA63700C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

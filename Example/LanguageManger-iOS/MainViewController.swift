@@ -25,7 +25,6 @@ class MainViewController: UIViewController {
 
     let month = dateFormatter.string(from: date)
     lblTest.text = month
-
   }
 
 }
