@@ -38,25 +38,22 @@ LanguageManager.shared.defaultLanguage = .en // you can use .deviceLanguage to k
 If you want to change the language use the ```setLanguage(language:)``` method by passing to it the new language
 
 ```swift
-@IBAction func changeLanguage(_ sender: UIButton) {
+  @IBAction func changeLanguage(_ sender: UIButton) {
 
-  let selectedLanguage: Languages = sender.tag == 1 ? .en : .ar
-        
-  // change the language.
-  LanguageManager.shared.setLanguage(language: selectedLanguage,
-                                     viewControllerFactory: { title -> UIViewController in
-    // you can check the title to set a specific for specific scene.
-    print(title ?? "")
-    // get the storyboard.
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    // instantiate the view controller that you want to show after changing the language.
-    return storyboard.instantiateInitialViewController()!
-  }) { view in
-    // do custom animation
-    view.transform = CGAffineTransform(scaleX: 2, y: 2)
-    view.alpha = 0
+    let selectedLanguage: Languages = sender.tag == 1 ? .en : .ar
+
+    // change the language
+    LanguageManager.shared.setLanguage(language: selectedLanguage)
+    { title -> UIViewController in
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      // the view controller that you want to show after changing the language
+      return storyboard.instantiateInitialViewController()!
+    } animation: { view in
+      // do custom animation
+      view.transform = CGAffineTransform(scaleX: 2, y: 2)
+      view.alpha = 0
+    }
   }
-}
 ```
 
 If you have an image and you want to change the direction of the image depending on the language, you can use image direction property, the property can be one of the following values:
@@ -73,7 +70,7 @@ and the image is right to left image then you need to set the value as 2.
 
 Please check the example project to see how it works.
 
-<b>Installation</b>
+## Installation
 
 LanguageManager-iOS is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
