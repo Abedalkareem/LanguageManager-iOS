@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1020"
+   LastUpgradeVersion = "1200"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "75F1EA88CB9544AB5CBE20DEC9A011AE"
-               BuildableName = "LanguageManager_iOS.framework"
-               BlueprintName = "LanguageManager-iOS"
+               BlueprintIdentifier = "80B3B75E13D99C5080C7E2CD9C4B988B"
+               BuildableName = "Pods_LanguageManager_iOS_Example.framework"
+               BlueprintName = "Pods-LanguageManager-iOS_Example"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,15 +40,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "75F1EA88CB9544AB5CBE20DEC9A011AE"
-            BuildableName = "LanguageManager_iOS.framework"
-            BlueprintName = "LanguageManager-iOS"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -56,6 +47,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "80B3B75E13D99C5080C7E2CD9C4B988B"
+            BuildableName = "Pods_LanguageManager_iOS_Example.framework"
+            BlueprintName = "Pods-LanguageManager-iOS_Example"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
