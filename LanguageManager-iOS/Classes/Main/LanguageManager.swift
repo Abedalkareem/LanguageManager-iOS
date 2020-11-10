@@ -36,9 +36,7 @@ public class LanguageManager {
 
   // MARK: - Private properties
 
-  private var defaults: UserDefaults {
-    UserDefaults.standard
-  }
+  private var storage = Storage()
 
   // MARK: - Properties
 
@@ -55,13 +53,13 @@ public class LanguageManager {
   ///
   public private(set) var currentLanguage: Languages {
     get {
-      guard let currentLang = defaults.string(forKey: Constants.defaultsKeys.selectedLanguage) else {
+      guard let currentLang = storage.string(forKey: .selectedLanguage) else {
         fatalError("Did you set the default language for the app?")
       }
       return Languages(rawValue: currentLang)!
     }
     set {
-      defaults.set(newValue.rawValue, forKey: Constants.defaultsKeys.selectedLanguage)
+      storage.set(newValue.rawValue, forKey: .selectedLanguage)
     }
   }
 
@@ -72,7 +70,7 @@ public class LanguageManager {
   ///
   public var defaultLanguage: Languages {
     get {
-      guard let defaultLanguage = defaults.string(forKey: Constants.defaultsKeys.defaultLanguage) else {
+      guard let defaultLanguage = storage.string(forKey: .defaultLanguage) else {
         fatalError("Did you set the default language for the app?")
       }
       return Languages(rawValue: defaultLanguage)!
@@ -81,7 +79,7 @@ public class LanguageManager {
       // swizzle the awakeFromNib from nib and localize the text in the new awakeFromNib
       UIView.localize()
 
-      let defaultLanguage = defaults.string(forKey: Constants.defaultsKeys.defaultLanguage)
+      let defaultLanguage = storage.string(forKey: .defaultLanguage)
       guard defaultLanguage == nil else {
         // If the default language has been set before,
         // that means that the user opened the app before and maybe
@@ -95,8 +93,8 @@ public class LanguageManager {
         language = deviceLanguage ?? .en
       }
 
-      defaults.set(language.rawValue, forKey: Constants.defaultsKeys.defaultLanguage)
-      defaults.set(language.rawValue, forKey: Constants.defaultsKeys.selectedLanguage)
+      storage.set(language.rawValue, forKey: .defaultLanguage)
+      storage.set(language.rawValue, forKey: .selectedLanguage)
       setLanguage(language: language)
     }
   }

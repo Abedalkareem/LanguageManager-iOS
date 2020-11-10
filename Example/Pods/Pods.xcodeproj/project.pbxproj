@@ -12,9 +12,10 @@
 		46060D79DB408D542E65C4A7A1EB5126 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F14EF2A04BE937DA9BBB231B0CD71A /* Languages.swift */; };
 		4A683F8EDC6300C52CF9F352ACF2EF19 /* UIButton+Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C803392DD9DF7F2ABADB37A35A7C4BC /* UIButton+Direction.swift */; };
 		6A813D5F8997829B205FBE1756ACAB9C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		7CE49257681884529B0F85E0BD9722E9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160D9174ACA3D2CF7B462C1CCCD375D2 /* Constants.swift */; };
+		7CE49257681884529B0F85E0BD9722E9 /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160D9174ACA3D2CF7B462C1CCCD375D2 /* DefaultsKeys.swift */; };
 		A81EE85A73400645F3E1AD68182421F8 /* ViewDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F747641E6B58A7BC476A4286F4D6B9E /* ViewDirection.swift */; };
 		B73A679FBBC8CEAA3034FF21ED299151 /* Pods-LanguageManager-iOS_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B292F0812AA9D68E1111803CFF7E52F /* Pods-LanguageManager-iOS_Example-dummy.m */; };
+		C66934EC255A983900BC6DC6 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66934EB255A983900BC6DC6 /* Storage.swift */; };
 		CBB1505F1C3FBF0CC01BEDD5B6D51062 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C82B9B7092A7F14030D33D3DB11453 /* String+Helpers.swift */; };
 		D14B8683DD68E24EB26CDA31CC841035 /* UIImageView+Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988DEF9A288472311CEB5BAA08C2965B /* UIImageView+Direction.swift */; };
 		E78ECC09A7E3AF010CBFB3D024F235E4 /* LanguageManager-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F20E2CB47F279CBE65C915231D7C23 /* LanguageManager-iOS-dummy.m */; };
@@ -38,33 +39,34 @@
 		02BECC6E80F99CECD55A7B7039C8916A /* LanguageManager-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "LanguageManager-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		0AF9274FC5873EE81F26B0A4D4306482 /* LanguageManager-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "LanguageManager-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		157B8DA199C01DDBD3BD9F23357C57ED /* Pods-LanguageManager-iOS_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LanguageManager-iOS_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		160D9174ACA3D2CF7B462C1CCCD375D2 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		160D9174ACA3D2CF7B462C1CCCD375D2 /* DefaultsKeys.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
 		2F747641E6B58A7BC476A4286F4D6B9E /* ViewDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewDirection.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		392AA4791871C410795C2882C7F568D5 /* Pods-LanguageManager-iOS_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LanguageManager-iOS_Example-Info.plist"; sourceTree = "<group>"; };
 		3B292F0812AA9D68E1111803CFF7E52F /* Pods-LanguageManager-iOS_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LanguageManager-iOS_Example-dummy.m"; sourceTree = "<group>"; };
 		3C803392DD9DF7F2ABADB37A35A7C4BC /* UIButton+Direction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+Direction.swift"; sourceTree = "<group>"; };
 		5FF75C1D961AD18FC12D948761E80E72 /* LanguageManager-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LanguageManager-iOS-Info.plist"; sourceTree = "<group>"; };
-		6473C16F43F7217C13AEA5FBA6C8247F /* LanguageManager_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LanguageManager_iOS.framework; path = "LanguageManager-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6473C16F43F7217C13AEA5FBA6C8247F /* LanguageManager_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LanguageManager_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A651EA65E56796162D54FB002744850 /* LanguageManager-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "LanguageManager-iOS.modulemap"; sourceTree = "<group>"; };
 		701DDBF51C8631530956F70DB2D35CB6 /* LanguageManager-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LanguageManager-iOS-umbrella.h"; sourceTree = "<group>"; };
 		71F20E2CB47F279CBE65C915231D7C23 /* LanguageManager-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LanguageManager-iOS-dummy.m"; sourceTree = "<group>"; };
-		73C8D4381B85A50332261B3F8FA60C04 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		73C8D4381B85A50332261B3F8FA60C04 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7EF68026E129565E86E3CC495C723575 /* Pods-LanguageManager-iOS_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LanguageManager-iOS_Example-umbrella.h"; sourceTree = "<group>"; };
 		7FBF5DE369B8A17E4C47791F22E28A3C /* LanguageManager-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LanguageManager-iOS-prefix.pch"; sourceTree = "<group>"; };
 		81C7DEDBCCF59BB3BF45701A91911348 /* LanguageManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		988DEF9A288472311CEB5BAA08C2965B /* UIImageView+Direction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImageView+Direction.swift"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1721C4E1B192A8767D4549567595430 /* UIView+Swizzling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Swizzling.swift"; sourceTree = "<group>"; };
 		A8ABC9D969AE2467919221E6EF5720F5 /* Pods-LanguageManager-iOS_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LanguageManager-iOS_Example.release.xcconfig"; sourceTree = "<group>"; };
 		AA8CB700112C52CFBDAF49BD6B3B5818 /* Pods-LanguageManager-iOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LanguageManager-iOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		BC2B9BF23DF20D1AE035B9B308451EAF /* UIView+Direction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Direction.swift"; sourceTree = "<group>"; };
-		C2B8F6D1CF878197661C40C19EFDAA59 /* Pods_LanguageManager_iOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LanguageManager_iOS_Example.framework; path = "Pods-LanguageManager-iOS_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2B8F6D1CF878197661C40C19EFDAA59 /* Pods_LanguageManager_iOS_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LanguageManager_iOS_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C43ACB7DF242B9A6B733DFCCB24A10EA /* Pods-LanguageManager-iOS_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LanguageManager-iOS_Example-frameworks.sh"; sourceTree = "<group>"; };
+		C66934EB255A983900BC6DC6 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		C9421D4AC2ADF598417930626C2DD1F8 /* Pods-LanguageManager-iOS_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LanguageManager-iOS_Example.modulemap"; sourceTree = "<group>"; };
-		D26F7473D5EC3B51ADFCCE44BED6F539 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		D26F7473D5EC3B51ADFCCE44BED6F539 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E03B8DA9DFEF125FDA5E13C49D5603F9 /* Pods-LanguageManager-iOS_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LanguageManager-iOS_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		E9133DEC3F3445F4BDA68CE88743B22A /* LanguageManager-iOS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = "LanguageManager-iOS.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E9133DEC3F3445F4BDA68CE88743B22A /* LanguageManager-iOS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = "LanguageManager-iOS.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F6F14EF2A04BE937DA9BBB231B0CD71A /* Languages.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		F9C82B9B7092A7F14030D33D3DB11453 /* String+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				5A9DF36485C04BF6CEBB444D06F4609A /* Extensions */,
+				C66934EB255A983900BC6DC6 /* Storage.swift */,
 			);
 			name = Helpers;
 			path = "LanguageManager-iOS/Classes/Helpers";
@@ -152,7 +155,6 @@
 				BC2B9BF23DF20D1AE035B9B308451EAF /* UIView+Direction.swift */,
 				A1721C4E1B192A8767D4549567595430 /* UIView+Swizzling.swift */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -184,7 +186,7 @@
 		897A6D4431014572308508B9B32A8177 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				160D9174ACA3D2CF7B462C1CCCD375D2 /* Constants.swift */,
+				160D9174ACA3D2CF7B462C1CCCD375D2 /* DefaultsKeys.swift */,
 				F6F14EF2A04BE937DA9BBB231B0CD71A /* Languages.swift */,
 				2F747641E6B58A7BC476A4286F4D6B9E /* ViewDirection.swift */,
 			);
@@ -355,7 +357,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CE49257681884529B0F85E0BD9722E9 /* Constants.swift in Sources */,
+				7CE49257681884529B0F85E0BD9722E9 /* DefaultsKeys.swift in Sources */,
+				C66934EC255A983900BC6DC6 /* Storage.swift in Sources */,
 				E78ECC09A7E3AF010CBFB3D024F235E4 /* LanguageManager-iOS-dummy.m in Sources */,
 				213FA881AB9542703E24AF2690072771 /* LanguageManager.swift in Sources */,
 				46060D79DB408D542E65C4A7A1EB5126 /* Languages.swift in Sources */,
@@ -529,8 +532,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
