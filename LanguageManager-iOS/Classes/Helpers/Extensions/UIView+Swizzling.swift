@@ -7,7 +7,7 @@
 
 import UIKit
 
-fileprivate extension UIView {
+extension UIView {
   static func localize() {
 
     let orginalSelector = #selector(awakeFromNib)
