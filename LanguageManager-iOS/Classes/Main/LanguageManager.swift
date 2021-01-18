@@ -168,14 +168,22 @@ public class LanguageManager {
 
   // MARK: - Private Methods
 
-  private func changeCurrentLanguageTo(_ language: Languages) {
-    // change the dircation of the views
-    let semanticContentAttribute: UISemanticContentAttribute = isLanguageRightToLeft(language: language) ? .forceRightToLeft : .forceLeftToRight
-    UIView.appearance().semanticContentAttribute = semanticContentAttribute
-
-    // set current language
-    currentLanguage = language
-  }
+    private func changeCurrentLanguageTo(_ language: Languages) {
+        // change the dircation of the views
+        currentLanguage = language
+        let semanticContentAttribute: UISemanticContentAttribute = isLanguageRightToLeft(language: language) ? .forceRightToLeft : .forceLeftToRight
+        UIView.appearance().semanticContentAttribute = semanticContentAttribute
+        UIView.appearance().semanticContentAttribute = semanticContentAttribute
+        UIButton.appearance().semanticContentAttribute = semanticContentAttribute
+        UITextView.appearance().semanticContentAttribute = semanticContentAttribute
+        UITextField.appearance().semanticContentAttribute = semanticContentAttribute
+        UINavigationBar.appearance().semanticContentAttribute = semanticContentAttribute
+        UITabBar.appearance().semanticContentAttribute = semanticContentAttribute
+        UISearchBar.appearance().semanticContentAttribute = semanticContentAttribute
+        UILabel.appearance().semanticContentAttribute = semanticContentAttribute
+        UIStackView.appearance().semanticContentAttribute = semanticContentAttribute
+        
+    }
 
   private func getWindowsToChangeFrom(_ windows: [WindowAndTitle]?) -> [WindowAndTitle]? {
     var windowsToChange: [WindowAndTitle]?
