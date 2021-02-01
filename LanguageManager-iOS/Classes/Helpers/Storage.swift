@@ -24,4 +24,9 @@ class Storage {
   func set(_ value: String, forKey: DefaultsKeys) {
     defaults.set(value, forKey: forKey.rawValue)
   }
+    
+  func clear() {
+    defaults.removeObject(forKey: DefaultsKeys.selectedLanguage.rawValue)
+    defaults.removeObject(forKey: DefaultsKeys.defaultLanguage.rawValue)
+  }
 }
