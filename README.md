@@ -12,6 +12,11 @@ Language manager used to handle change app language without restart the app
 
 <img src="https://raw.githubusercontent.com/Abedalkareem/LanguageManager-iOS/master/screenrec.gif"  width="450">
 
+
+## LanguageManager-SwiftUI
+
+For SwiftUI please visit the [LanguageManager-SwiftUI](https://github.com/Abedalkareem/LanguageManager-SwiftUI)
+
 ## LanguageManager-iOS + Lokalise
 
 For LanguageManger-iOS with Lokalise integration please visit the [LanguageManager-iOS-Lokalise](https://github.com/Abedalkareem/LanguageManager-iOS-Lokalise) repo.
