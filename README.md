@@ -3,7 +3,7 @@
 </p>
 <br>
 
-Language manager used to handle change app language without restart the app
+A Language manager to handle changing app language without restarting the app.
 
 <br>
 
