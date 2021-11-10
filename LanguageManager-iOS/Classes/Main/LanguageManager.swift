@@ -28,7 +28,7 @@
 
 import UIKit
 
-public class LanguageManager {
+public class LanguageManager: NSObject {
 
   public typealias Animation = ((UIView) -> Void)
   public typealias ViewControllerFactory = ((String?) -> UIViewController)
@@ -43,7 +43,7 @@ public class LanguageManager {
   ///
   /// The singleton LanguageManager instance.
   ///
-  public static let shared: LanguageManager = LanguageManager()
+  @objc public static let shared: LanguageManager = LanguageManager()
 
   ///
   /// Current app language.
@@ -143,7 +143,7 @@ public class LanguageManager {
   ///                        so you need to animate the view, move it out of the screen, change the alpha,
   ///                        or scale it down to zero.
   ///
-  public func setLanguage(language: Languages,
+  @objc public func setLanguage(language: Languages,
                           for windows: [WindowAndTitle]? = nil,
                           viewControllerFactory: ViewControllerFactory? = nil,
                           animation: Animation? = nil) {
