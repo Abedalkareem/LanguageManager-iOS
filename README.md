@@ -17,10 +17,6 @@ A Language manager to handle changing app language without restarting the app.
 
 For SwiftUI please visit the [LanguageManager-SwiftUI](https://github.com/Abedalkareem/LanguageManager-SwiftUI)
 
-## LanguageManager-iOS + Lokalise
-
-For LanguageManger-iOS with Lokalise integration please visit the [LanguageManager-iOS-Lokalise](https://github.com/Abedalkareem/LanguageManager-iOS-Lokalise) repo.
-
 ## Usage
 
 <a href="http://www.youtube.com/watch?v=CuZb8nUglcg">Youtube: iOS - Support multiple languages (Localization).</a> <br>
