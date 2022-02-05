@@ -1,6 +1,6 @@
 use_frameworks!
 
-target 'LanguageManager-iOS_Example' do
+target 'LanguageManagerExample' do
   pod 'LanguageManager-iOS', :path => '../'
   
 end

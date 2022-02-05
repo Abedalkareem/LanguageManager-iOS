@@ -104,26 +104,20 @@ public class LanguageManager {
   /// to get the app language use `currentLanguage`.
   ///
   public var deviceLanguage: Languages? {
-    get {
-      guard let deviceLanguage = Bundle.main.preferredLocalizations.first else {
-        return nil
-      }
-      return Languages(rawValue: deviceLanguage)
+    guard let deviceLanguage = Bundle.main.preferredLocalizations.first else {
+      return nil
     }
+    return Languages(rawValue: deviceLanguage)
   }
 
   /// The diriction of the language.
   public var isRightToLeft: Bool {
-    get {
-      return isLanguageRightToLeft(language: currentLanguage)
-    }
+    return isLanguageRightToLeft(language: currentLanguage)
   }
 
   /// The app locale to use it in dates and currency.
   public var appLocale: Locale {
-    get {
-      return Locale(identifier: currentLanguage.rawValue)
-    }
+    return Locale(identifier: currentLanguage.rawValue)
   }
 
   // MARK: - Public Methods
@@ -135,9 +129,10 @@ public class LanguageManager {
   /// - parameter windows: The windows you want to change the `rootViewController` for. if you didn't
   ///                      set it, it will change the `rootViewController` for all the windows in the
   ///                      scenes.
-  /// - parameter viewControllerFactory: A closure to make the `ViewController` for a specific `scene`, you can know for which
-  ///                                    `scene` you need to make the controller you can check the `title` sent to this clouser,
-  ///                                    this title is the `title` of the `scene`, so if there is 5 scenes this closure will get called 5 times
+  /// - parameter viewControllerFactory: A closure to make the `ViewController` for a specific `scene`,
+  ///                                    you can know for which `scene` you need to make the controller you can check
+  ///                                    the `title` sent to this clouser, this title is the `title` of the `scene`,
+  ///                                    so if there is 5 scenes this closure will get called 5 times
   ///                                    for each scene window.
   /// - parameter animation: A closure with the current view to animate to the new view controller,
   ///                        so you need to animate the view, move it out of the screen, change the alpha,
@@ -160,8 +155,8 @@ public class LanguageManager {
       let (window, title) = windowAndTitle
       let viewController = viewControllerFactory(title)
       changeViewController(for: window,
-                           rootViewController: viewController,
-                           animation: animation)
+                              rootViewController: viewController,
+                              animation: animation)
     })
 
   }
@@ -170,7 +165,9 @@ public class LanguageManager {
 
   private func changeCurrentLanguageTo(_ language: Languages) {
     // change the dircation of the views
-    let semanticContentAttribute: UISemanticContentAttribute = isLanguageRightToLeft(language: language) ? .forceRightToLeft : .forceLeftToRight
+    let semanticContentAttribute: UISemanticContentAttribute = isLanguageRightToLeft(language: language) ?
+      .forceRightToLeft :
+      .forceLeftToRight
     UIView.appearance().semanticContentAttribute = semanticContentAttribute
 
     // set current language
@@ -184,7 +181,7 @@ public class LanguageManager {
     } else {
       if #available(iOS 13.0, *) {
         windowsToChange = UIApplication.shared.connectedScenes
-          .compactMap({$0 as? UIWindowScene})
+          .compactMap({ $0 as? UIWindowScene })
           .map({ ($0.windows.first, $0.title) })
       } else {
         windowsToChange = [(UIApplication.shared.keyWindow, nil)]
@@ -200,15 +197,15 @@ public class LanguageManager {
     guard let snapshot = window?.snapshotView(afterScreenUpdates: true) else {
       return
     }
-    rootViewController.view.addSubview(snapshot);
+    rootViewController.view.addSubview(snapshot)
 
     window?.rootViewController = rootViewController
 
     UIView.animate(withDuration: 0.5, animations: {
       animation?(snapshot)
-    }) { _ in
+    }, completion: { _ in
       snapshot.removeFromSuperview()
-    }
+    })
   }
 
   private func isLanguageRightToLeft(language: Languages) -> Bool {

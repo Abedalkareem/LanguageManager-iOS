@@ -15,7 +15,8 @@ public extension String {
   /// - returns: The localized string
   ///
   func localiz(comment: String = "") -> String {
-    guard let bundle = Bundle.main.path(forResource: LanguageManager.shared.currentLanguage.rawValue, ofType: "lproj") else {
+    guard let bundle = Bundle.main.path(forResource: LanguageManager.shared.currentLanguage.rawValue,
+                                        ofType: "lproj") else {
       return NSLocalizedString(self, comment: comment)
     }
 

@@ -16,17 +16,24 @@ extension UIView {
     let orginalMethod = class_getInstanceMethod(self, orginalSelector)
     let swizzledMethod = class_getInstanceMethod(self, swizzledSelector)
 
-    let didAddMethod = class_addMethod(self, orginalSelector, method_getImplementation(swizzledMethod!), method_getTypeEncoding(swizzledMethod!))
+    let didAddMethod = class_addMethod(self,
+                                       orginalSelector,
+                                       method_getImplementation(swizzledMethod!),
+                                       method_getTypeEncoding(swizzledMethod!))
 
     if didAddMethod {
-      class_replaceMethod(self, swizzledSelector, method_getImplementation(orginalMethod!), method_getTypeEncoding(orginalMethod!))
+      class_replaceMethod(self,
+                          swizzledSelector,
+                          method_getImplementation(orginalMethod!),
+                          method_getTypeEncoding(orginalMethod!))
     } else {
       method_exchangeImplementations(orginalMethod!, swizzledMethod!)
     }
 
   }
 
-  @objc func swizzledAwakeFromNib() {
+  @objc
+  func swizzledAwakeFromNib() {
     swizzledAwakeFromNib()
 
     switch self {
@@ -40,7 +47,8 @@ extension UIView {
     case let btn as UIButton:
       btn.setTitle(btn.title(for: .normal)?.localiz(), for: .normal)
     case let sgmnt as UISegmentedControl:
-      (0 ..< sgmnt.numberOfSegments).forEach { sgmnt.setTitle(sgmnt.titleForSegment(at: $0)?.localiz(), forSegmentAt: $0) }
+      (0 ..< sgmnt.numberOfSegments)
+        .forEach { sgmnt.setTitle(sgmnt.titleForSegment(at: $0)?.localiz(), forSegmentAt: $0) }
     case let txtv as UITextView:
       txtv.text = txtv.text?.localiz()
     default:

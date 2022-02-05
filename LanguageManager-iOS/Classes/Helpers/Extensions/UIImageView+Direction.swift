@@ -22,11 +22,11 @@ public extension UIImageView {
   /// and the image is right to left image then you need to set the value as 2.
   ///
   @IBInspectable var imageDirection: Int {
-    set {
-      direction = ViewDirection(rawValue: newValue)!
-    }
     get {
       return direction.rawValue
+    }
+    set {
+      direction = ViewDirection(rawValue: newValue)!
     }
   }
 }

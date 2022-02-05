@@ -1,6 +1,6 @@
 {
   "name": "LanguageManager-iOS",
-  "version": "1.2.1",
+  "version": "1.2.5",
   "summary": "Language manager used to handle change app language",
   "description": "Language manager used to handle change app language without restart the app.",
   "homepage": "https://github.com/Abedalkareem/LanguageManager-iOS",
@@ -13,12 +13,13 @@
   },
   "source": {
     "git": "https://github.com/Abedalkareem/LanguageManager-iOS.git",
-    "tag": "1.2.1"
+    "tag": "1.2.5"
   },
   "swift_versions": "5.0",
   "social_media_url": "https://twitter.com/AbedalkareemOmr",
   "platforms": {
-    "ios": "9.0"
+    "ios": "9.0",
+    "tvos": "13.0"
   },
   "source_files": "LanguageManager-iOS/Classes/**/*",
   "swift_version": "5.0"

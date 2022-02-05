@@ -1,0 +1,24 @@
+opt_in_rules:
+  - empty_count
+  - explicit_init
+  - closure_spacing
+  - overridden_super_call
+  - redundant_nil_coalescing
+  - private_outlet
+  - nimble_operator
+  - attributes
+  - operator_usage_whitespace
+  - closure_end_indentation
+  - first_where
+  - sorted_imports
+  - object_literal
+  - number_separator
+  - prohibited_super_call
+  - fatal_error_message
+
+disabled_rules:
+  - identifier_name
+
+line_length: 130
+number_separator:
+  minimum_length: 5

@@ -22,6 +22,12 @@ extension UIView {
   /// and the view is right to left view.
   ///
   var direction: ViewDirection {
+    get {
+      fatalError("""
+                 There is no value return from this variable,
+                 this variable used to change the view direction depending on the langauge
+                 """)
+    }
     set {
       switch newValue {
       case .fixed:
@@ -33,9 +39,6 @@ extension UIView {
       default:
         break
       }
-    }
-    get {
-      fatalError("There is no value return from this variable, this variable used to change the view direction depending on the langauge")
     }
   }
 }
