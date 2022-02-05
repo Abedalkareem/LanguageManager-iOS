@@ -43,7 +43,7 @@ public class LanguageManager {
   ///
   /// The singleton LanguageManager instance.
   ///
-  public static let shared: LanguageManager = LanguageManager()
+  public static let shared = LanguageManager()
 
   ///
   /// Current app language.
@@ -64,9 +64,9 @@ public class LanguageManager {
   }
 
   ///
-  /// The default language that the app will run first time.
+  /// The default language that the app will run with first time.
   /// You need to set the `defaultLanguage` in the `AppDelegate`, specifically in
-  /// the first line inside `application(_:willFinishLaunchingWithOptions:)`.
+  /// the first line inside the `application(_:willFinishLaunchingWithOptions:)` method.
   ///
   public var defaultLanguage: Languages {
     get {

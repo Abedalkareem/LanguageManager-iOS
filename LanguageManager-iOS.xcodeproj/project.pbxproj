@@ -19,7 +19,7 @@
 		C60378C927AE32FE00707CA0 /* UIButton+Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60378BC27AE32FE00707CA0 /* UIButton+Direction.swift */; };
 		C60378CA27AE32FE00707CA0 /* UIImageView+Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60378BD27AE32FE00707CA0 /* UIImageView+Direction.swift */; };
 		C60378CB27AE32FE00707CA0 /* UIView+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60378BE27AE32FE00707CA0 /* UIView+Swizzling.swift */; };
-		C60378CC27AE32FE00707CA0 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60378BF27AE32FE00707CA0 /* String+Helpers.swift */; };
+		C60378CC27AE32FE00707CA0 /* String+Localiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60378BF27AE32FE00707CA0 /* String+Localiz.swift */; };
 		C60378CD27AE32FE00707CA0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = C60378C127AE32FE00707CA0 /* .gitkeep */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,7 @@
 		C60378BC27AE32FE00707CA0 /* UIButton+Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Direction.swift"; sourceTree = "<group>"; };
 		C60378BD27AE32FE00707CA0 /* UIImageView+Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Direction.swift"; sourceTree = "<group>"; };
 		C60378BE27AE32FE00707CA0 /* UIView+Swizzling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Swizzling.swift"; sourceTree = "<group>"; };
-		C60378BF27AE32FE00707CA0 /* String+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
+		C60378BF27AE32FE00707CA0 /* String+Localiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localiz.swift"; sourceTree = "<group>"; };
 		C60378C127AE32FE00707CA0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,7 +150,7 @@
 				C60378BC27AE32FE00707CA0 /* UIButton+Direction.swift */,
 				C60378BD27AE32FE00707CA0 /* UIImageView+Direction.swift */,
 				C60378BE27AE32FE00707CA0 /* UIView+Swizzling.swift */,
-				C60378BF27AE32FE00707CA0 /* String+Helpers.swift */,
+				C60378BF27AE32FE00707CA0 /* String+Localiz.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -295,7 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C60378CC27AE32FE00707CA0 /* String+Helpers.swift in Sources */,
+				C60378CC27AE32FE00707CA0 /* String+Localiz.swift in Sources */,
 				C60378C927AE32FE00707CA0 /* UIButton+Direction.swift in Sources */,
 				C60378C427AE32FE00707CA0 /* ViewDirection.swift in Sources */,
 				C60378C227AE32FE00707CA0 /* DefaultsKeys.swift in Sources */,
