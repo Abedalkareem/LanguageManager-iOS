@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C60378A127AE326600707CA0 /* LanguageManager_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C603789627AE326600707CA0 /* LanguageManager_iOS.framework */; };
-		C60378A627AE326600707CA0 /* LanguageManageriOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60378A527AE326600707CA0 /* LanguageManageriOSTests.swift */; };
 		C60378A727AE326600707CA0 /* LanguageManager_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = C603789927AE326600707CA0 /* LanguageManager_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C60378C227AE32FE00707CA0 /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60378B227AE32FE00707CA0 /* DefaultsKeys.swift */; };
 		C60378C327AE32FE00707CA0 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60378B327AE32FE00707CA0 /* Languages.swift */; };
@@ -37,7 +36,6 @@
 		C603789627AE326600707CA0 /* LanguageManager_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LanguageManager_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C603789927AE326600707CA0 /* LanguageManager_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguageManager_iOS.h; sourceTree = "<group>"; };
 		C60378A027AE326600707CA0 /* LanguageManager-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LanguageManager-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C60378A527AE326600707CA0 /* LanguageManageriOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManageriOSTests.swift; sourceTree = "<group>"; };
 		C60378B227AE32FE00707CA0 /* DefaultsKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
 		C60378B327AE32FE00707CA0 /* Languages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		C60378B427AE32FE00707CA0 /* ViewDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDirection.swift; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 		C60378A427AE326600707CA0 /* LanguageManager-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				C60378A527AE326600707CA0 /* LanguageManageriOSTests.swift */,
 			);
 			path = "LanguageManager-iOSTests";
 			sourceTree = "<group>";
@@ -312,7 +309,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C60378A627AE326600707CA0 /* LanguageManageriOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

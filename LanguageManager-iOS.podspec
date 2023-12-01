@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LanguageManager-iOS'
-  s.version          = '1.2.5'
+  s.version          = '1.2.7'
   s.summary          = 'Language manager used to handle change app language'
 
   s.description      = <<-DESC

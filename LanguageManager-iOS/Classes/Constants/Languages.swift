@@ -9,7 +9,7 @@ import Foundation
 
 public enum Languages: String {
   case ar, en, nl, ja, ko, vi, ru, sv, fr, es, pt, it, de, da, fi, nb, tr, el, id,
-  ms, th, hi, hu, pl, cs, sk, uk, hr, ca, ro, he, ur, fa, ku, arc, sl, ml, am
+  ms, th, hi, hu, pl, cs, sk, uk, hr, ca, ro, he, ur, fa, ku, arc, sl, ml, am, zh, mn, ka, sw
   case enGB = "en-GB"
   case enAU = "en-AU"
   case enCA = "en-CA"
