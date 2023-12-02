@@ -1,9 +1,15 @@
+[![pub package](https://img.shields.io/pub/v/scale.svg)](https://pub.dartlang.org/packages/scale)
+[![Telegram](https://img.shields.io/badge/chat-telegram-0088cc)](https://t.me/+NvUXzshmIg44N2M0)
+[![Youtube](https://img.shields.io/badge/subscribe-youtube-c4302b)](https://www.youtube.com/@AkDebuging)
+[![Twitter](https://img.shields.io/badge/follow-x-000000)](https://x.com/akdebuging)
+[![Coffee](https://img.shields.io/badge/buy%20me%20a-coffee-orange)](https://www.buymeacoffee.com/akdebuging)
+
 <p align="center">
 <img src="https://github.com/Abedalkareem/LanguageManager-iOS/blob/master/Images/logo.png?raw=true"  width="150">  </center>
 </p>
 <br>
 
-A Language manager to handle changing app language without restarting the app.
+A Language manager to handle changing the app language without restarting the app.
 
 <br>
 
@@ -15,15 +21,15 @@ A Language manager to handle changing app language without restarting the app.
 
 ## LanguageManager-SwiftUI
 
-For SwiftUI please visit the [LanguageManager-SwiftUI](https://github.com/Abedalkareem/LanguageManager-SwiftUI)
+For SwiftUI please visit [LanguageManager-SwiftUI](https://github.com/Abedalkareem/LanguageManager-SwiftUI)
 
 ## Usage
 
 <a href="http://www.youtube.com/watch?v=CuZb8nUglcg">Youtube: iOS - Support multiple languages (Localization).</a> <br>
 [![Watch the video](http://img.youtube.com/vi/CuZb8nUglcg/0.jpg)](http://www.youtube.com/watch?v=CuZb8nUglcg "iOS - Support multiple languages (Localization).")
 
-First of all, remember to add the ```Localizable.strings``` to your project, after adding the ```Localizable.strings``` file, select it then go to file inspector and below localization press localize, after that go to ```PROJECT > Localisation```  then add the languages you want to support (Arabic for example), dialog will appear to ask you which resource file you want to localize, select just the ```Localizable.strings``` file. <br>  <br>
-Now, go to your storyboard and add ```UILable``` and add text to it, for example ```"Hello !"```, then go to your ```Localizable.strings``` file expand it, you will find Localizable strings file for English and Arabic, for English, add this line with the string you used in the ```UILabel``` inside the storyboard   <br>
+First of all, remember to add the ```Localizable.strings``` to your project, after adding the ```Localizable.strings``` file, select it then go to file inspector and below localization press localize, after that go to ```PROJECT > Localisation```  then add the languages you want to support (Arabic for example), a dialog will appear to ask you which resource file you want to localize, select just the ```Localizable.strings``` file. <br>  <br>
+Now, go to your storyboard and add ```UILable``` then add text to it, for example ```"Hello !"```, then go to your ```Localizable.strings``` file expand it, you will find Localizable strings file for English and Arabic, for English, add this line with the string you used in the ```UILabel``` inside the storyboard   <br>
 ```"Hello !" = "Hello !";```  <br>
 and for Arabic file :  <br>
 ```"Hello !" = "مرحبا !";```  <br>
@@ -88,18 +94,15 @@ github "Abedalkareem/LanguageManager-iOS"
 
 You can also use [Swift Package Manager](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app).
 
-## Support me 🚀
+## Support me 🚀  
 
 You can support this project by:  
 
 1- Checking my [apps](https://apps.apple.com/us/developer/id928910207).  
 2- Star the repo.  
 3- Share the repo with your friends.  
+4- [Buy Me A Coffee](https://www.buymeacoffee.com/akdebuging).  
 
 ## Follow me ❤️  
 
-[Facebook](https://www.facebook.com/Abedalkareem.Omreyh/) | [Twitter](https://twitter.com/abedalkareemomr) | [Instagram](https://instagram.com/abedalkareemomreyh/) | [Youtube](https:/٧٦٧٦٩٦٧٠ /www.youtube.com/user/AbedalkareemOmreyh)
-
-## License  
-
-Please check the license file.  
+[Facebook](https://www.facebook.com/Abedalkareem.Omreyh/) | [Twitter](https://twitter.com/akdebuging) | [Instagram](https://instagram.com/abedalkareemomreyh/) | [Youtube](https://www.youtube.com/@akdebuging)
