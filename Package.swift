@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.3
 //
 //  LanguageManager.swift
 //
@@ -35,5 +35,6 @@ let package = Package(name: "LanguageManager-iOS",
                       products: [.library(name: "LanguageManager-iOS",
                                           targets: ["LanguageManager-iOS"])],
                       targets: [.target(name: "LanguageManager-iOS",
-                                        path: "LanguageManager-iOS/Classes")],
+                                        path: "LanguageManager-iOS/Classes",
+                                        resources: [.process("../PrivacyInfo.xcprivacy")])],
                       swiftLanguageVersions: [.v5])

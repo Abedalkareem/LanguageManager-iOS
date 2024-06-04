@@ -20,6 +20,7 @@
 		C60378CB27AE32FE00707CA0 /* UIView+Swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60378BE27AE32FE00707CA0 /* UIView+Swizzling.swift */; };
 		C60378CC27AE32FE00707CA0 /* String+Localiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60378BF27AE32FE00707CA0 /* String+Localiz.swift */; };
 		C60378CD27AE32FE00707CA0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = C60378C127AE32FE00707CA0 /* .gitkeep */; };
+		C66A67692C0EA694006BD68B /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C66A67682C0EA694006BD68B /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C60378BE27AE32FE00707CA0 /* UIView+Swizzling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Swizzling.swift"; sourceTree = "<group>"; };
 		C60378BF27AE32FE00707CA0 /* String+Localiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localiz.swift"; sourceTree = "<group>"; };
 		C60378C127AE32FE00707CA0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		C66A67682C0EA694006BD68B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				C60378C027AE32FE00707CA0 /* Assets */,
 				C60378B027AE32FE00707CA0 /* Classes */,
 				C603789927AE326600707CA0 /* LanguageManager_iOS.h */,
+				C66A67682C0EA694006BD68B /* PrivacyInfo.xcprivacy */,
 			);
 			path = "LanguageManager-iOS";
 			sourceTree = "<group>";
@@ -219,7 +222,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					C603789527AE326600707CA0 = {
 						CreatedOnToolsVersion = 13.1;
@@ -253,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C66A67692C0EA694006BD68B /* PrivacyInfo.xcprivacy in Resources */,
 				C60378CD27AE32FE00707CA0 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,12 +452,14 @@
 		C60378AB27AE326600707CA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -464,6 +470,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++17";
 				PRODUCT_BUNDLE_IDENTIFIER = "abedalkareem.LanguageManager-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -476,12 +483,14 @@
 		C60378AC27AE326600707CA0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -492,6 +501,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++17";
 				PRODUCT_BUNDLE_IDENTIFIER = "abedalkareem.LanguageManager-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
