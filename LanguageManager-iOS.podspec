@@ -27,4 +27,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'LanguageManager-iOS/Classes/**/*'
   
+  s.resource_bundles = {"LanguageManager-iOS" => ["LanguageManager-iOS/PrivacyInfo.xcprivacy"]}
+
 end
